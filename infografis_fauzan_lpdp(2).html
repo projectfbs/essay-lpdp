@@ -1,0 +1,2819 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infografis Essay LPDP – Fauzan Budi Setiawan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  
+  :root {
+    --navy: #0A1628;
+    --navy-2: #152240;
+    --navy-3: #1E3358;
+    --blue-bright: #2563EB;
+    --blue-mid: #3B82F6;
+    --blue-light: #BFDBFE;
+    --blue-pale: #EFF6FF;
+    --teal: #0D9488;
+    --teal-light: #CCFBF1;
+    --amber: #D97706;
+    --amber-light: #FEF3C7;
+    --coral: #DC4A26;
+    --coral-light: #FDECE8;
+    --green: #16A34A;
+    --green-light: #DCFCE7;
+    --slate: #64748B;
+    --slate-light: #F1F5F9;
+    --text-dark: #0F172A;
+    --text-mid: #334155;
+    --text-muted: #64748B;
+    --border: #E2E8F0;
+    --white: #FFFFFF;
+    --serif: 'DM Serif Display', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+  }
+
+  body {
+    font-family: var(--sans);
+    background: var(--slate-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--navy);
+    padding: 4rem 2rem 3rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 70% 60% at 50% 100%, rgba(37,99,235,0.22) 0%, transparent 70%);
+  }
+  .hero-tag {
+    display: inline-block;
+    background: rgba(37,99,235,0.2);
+    border: 1px solid rgba(59,130,246,0.4);
+    color: var(--blue-light);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.35rem 1rem;
+    border-radius: 999px;
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+  .hero h1 {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    color: var(--white);
+    line-height: 1.15;
+    position: relative;
+    max-width: 760px;
+    margin: 0 auto 1rem;
+  }
+  .hero h1 em { color: #93C5FD; font-style: italic; }
+  .hero-sub {
+    color: #94A3B8;
+    font-size: 0.95rem;
+    font-weight: 300;
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto 2.5rem;
+  }
+  .hero-meta {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  .hero-meta-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+  }
+  .hero-meta-item .val {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--white);
+  }
+  .hero-meta-item .lbl {
+    font-size: 0.72rem;
+    color: #94A3B8;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .divider-hero { width: 1px; background: rgba(255,255,255,0.12); }
+
+  /* ── LAYOUT ── */
+  .page { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem 5rem; }
+
+  /* ── SECTION LABEL ── */
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 3rem 0 1.5rem;
+  }
+  .section-label .pill {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.9rem;
+    border-radius: 999px;
+  }
+  .pill-blue { background: var(--blue-pale); color: var(--blue-bright); border: 1px solid var(--blue-light); }
+  .pill-teal { background: var(--teal-light); color: var(--teal); border: 1px solid #99F6E4; }
+  .pill-amber { background: var(--amber-light); color: var(--amber); border: 1px solid #FDE68A; }
+  .pill-coral { background: var(--coral-light); color: var(--coral); border: 1px solid #FCC9B5; }
+  .pill-green { background: var(--green-light); color: var(--green); border: 1px solid #BBF7D0; }
+  .pill-navy { background: rgba(10,22,40,0.06); color: var(--navy-2); border: 1px solid rgba(10,22,40,0.15); }
+
+  .section-label h2 {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    font-weight: 400;
+  }
+  .section-line { flex: 1; height: 1px; background: var(--border); }
+
+  /* ── CARDS ── */
+  .card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.5rem;
+  }
+  .card-grid { display: grid; gap: 1rem; }
+  .card-grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+  .card-grid-3 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+
+  /* ── OUTLINE CARDS ── */
+  .outline-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .outline-card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .outline-num {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.85rem; font-weight: 600;
+    flex-shrink: 0;
+  }
+  .num-blue { background: var(--blue-pale); color: var(--blue-bright); }
+  .num-teal { background: var(--teal-light); color: var(--teal); }
+  .num-amber { background: var(--amber-light); color: var(--amber); }
+  .num-coral { background: var(--coral-light); color: var(--coral); }
+  .num-green { background: var(--green-light); color: var(--green); }
+
+  .outline-card-header h3 {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: var(--text-dark);
+    line-height: 1.3;
+  }
+  .outline-card-header p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 0.25rem;
+  }
+  .outline-body { padding: 1.25rem 1.5rem; }
+  .outline-body ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+  .outline-body li {
+    display: flex; gap: 0.6rem; font-size: 0.875rem; color: var(--text-mid); align-items: flex-start;
+  }
+  .outline-body li::before {
+    content: '→';
+    color: var(--slate);
+    flex-shrink: 0;
+    margin-top: 0.02em;
+  }
+
+  /* ── QUOTE BLOCK ── */
+  .quote-block {
+    border-left: 3px solid var(--blue-bright);
+    background: var(--blue-pale);
+    padding: 1rem 1.25rem;
+    border-radius: 0 10px 10px 0;
+    margin: 1rem 0;
+  }
+  .quote-block p {
+    font-family: var(--serif);
+    font-style: italic;
+    color: var(--navy-2);
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  /* ── TIMELINE ── */
+  .timeline { position: relative; padding-left: 2rem; }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0.55rem; top: 0; bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--blue-bright), var(--teal), var(--green));
+  }
+  .timeline-item { position: relative; margin-bottom: 1.5rem; }
+  .timeline-dot {
+    position: absolute;
+    left: -1.55rem; top: 0.25rem;
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    border: 2px solid var(--white);
+    box-shadow: 0 0 0 2px;
+  }
+  .dot-blue { background: var(--blue-bright); box-shadow: 0 0 0 2px var(--blue-bright); }
+  .dot-teal { background: var(--teal); box-shadow: 0 0 0 2px var(--teal); }
+  .dot-green { background: var(--green); box-shadow: 0 0 0 2px var(--green); }
+  .dot-amber { background: var(--amber); box-shadow: 0 0 0 2px var(--amber); }
+
+  .timeline-item h4 { font-size: 0.9rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.3rem; }
+  .timeline-item p { font-size: 0.82rem; color: var(--text-mid); line-height: 1.55; }
+  .timeline-badge {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 500;
+    padding: 0.15rem 0.6rem;
+    border-radius: 999px;
+    margin-bottom: 0.3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  /* ── STAT GRID ── */
+  .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; }
+  .stat-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.25rem 1rem;
+    text-align: center;
+  }
+  .stat-card .stat-val { font-size: 1.8rem; font-weight: 700; line-height: 1; margin-bottom: 0.3rem; }
+  .stat-card .stat-lbl { font-size: 0.75rem; color: var(--text-muted); }
+
+  /* ── CONNECTION MAP ── */
+  .connection-section {
+    background: var(--navy);
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin-top: 1rem;
+  }
+  .connection-section h3 {
+    font-family: var(--serif);
+    color: var(--white);
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 0.4rem;
+  }
+  .connection-section > p { color: #94A3B8; font-size: 0.85rem; margin-bottom: 2rem; }
+  .conn-grid { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1.5rem; align-items: start; }
+  .conn-col h4 { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1rem; }
+  .conn-col.ps h4 { color: #93C5FD; }
+  .conn-col.es h4 { color: #6EE7B7; }
+  .conn-item {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.6rem;
+    font-size: 0.8rem;
+    color: #CBD5E1;
+    line-height: 1.4;
+  }
+  .conn-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding-top: 2.2rem;
+  }
+  .conn-node {
+    background: rgba(37,99,235,0.3);
+    border: 1px solid rgba(59,130,246,0.5);
+    color: var(--blue-light);
+    border-radius: 999px;
+    padding: 0.4rem 0.9rem;
+    font-size: 0.72rem;
+    font-weight: 500;
+    text-align: center;
+    white-space: nowrap;
+  }
+  .conn-line { width: 1px; height: 1.2rem; background: rgba(255,255,255,0.15); margin: 0 auto; }
+
+  .theme-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+  .theme-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 1rem 1.2rem;
+  }
+  .theme-card .icon { font-size: 1.2rem; margin-bottom: 0.5rem; }
+  .theme-card h5 { font-size: 0.85rem; color: var(--white); font-weight: 500; margin-bottom: 0.4rem; }
+  .theme-card p { font-size: 0.75rem; color: #94A3B8; line-height: 1.45; }
+
+  /* ── PROFILE BANNER ── */
+  .profile-banner {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    position: relative;
+    z-index: 1;
+  }
+  .profile-avatar {
+    width: 64px; height: 64px;
+    border-radius: 50%;
+    background: var(--navy);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    color: var(--white);
+    flex-shrink: 0;
+    border: 3px solid var(--white);
+    box-shadow: 0 0 0 2px var(--blue-bright);
+  }
+  .profile-info h2 { font-family: var(--serif); font-size: 1.3rem; font-weight: 400; margin-bottom: 0.25rem; }
+  .profile-info p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; }
+  .profile-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.6rem; }
+  .tag {
+    font-size: 0.7rem; font-weight: 500; padding: 0.2rem 0.65rem;
+    border-radius: 999px; border: 1px solid;
+  }
+  .tag-blue { background: var(--blue-pale); color: var(--blue-bright); border-color: var(--blue-light); }
+  .tag-teal { background: var(--teal-light); color: var(--teal); border-color: #99F6E4; }
+  .tag-navy { background: rgba(10,22,40,0.05); color: var(--navy-2); border-color: rgba(10,22,40,0.12); }
+
+  /* ── CERT CHIPS ── */
+  .chip-row { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .chip {
+    font-size: 0.72rem; font-weight: 500;
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--slate-light);
+    color: var(--text-mid);
+  }
+
+  /* ── ROADMAP ── */
+  .roadmap { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0; position: relative; }
+  .roadmap-item {
+    padding: 1.5rem 1.25rem;
+    border-right: 1px solid var(--border);
+    position: relative;
+  }
+  .roadmap-item:last-child { border-right: none; }
+  .roadmap-phase {
+    font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em;
+    text-transform: uppercase; margin-bottom: 0.6rem;
+  }
+  .roadmap-item h4 { font-size: 0.9rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.6rem; }
+  .roadmap-item ul { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+  .roadmap-item li { font-size: 0.78rem; color: var(--text-mid); padding-left: 1rem; position: relative; }
+  .roadmap-item li::before { content: '·'; position: absolute; left: 0.3rem; color: var(--slate); }
+
+  /* ── FOOTER ── */
+  .footer { text-align: center; padding: 2rem; color: var(--text-muted); font-size: 0.78rem; }
+
+  @media (max-width: 640px) {
+    .conn-grid { grid-template-columns: 1fr; }
+    .conn-center { flex-direction: row; flex-wrap: wrap; justify-content: center; padding-top: 0; }
+  }
+
+  /* ── STICKY NAV ── */
+  .sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(10,22,40,0.97);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .nav-topbar {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.65rem 1.5rem;
+    gap: 1rem;
+  }
+  .nav-brand {
+    display: flex; align-items: center; gap: 0.6rem;
+    color: #CBD5E1; font-size: 0.8rem; font-weight: 500;
+    white-space: nowrap; flex-shrink: 0;
+  }
+  .nav-brand span { color: #93C5FD; font-weight: 600; }
+  .nav-hamburger {
+    display: flex; align-items: center; gap: 0.6rem;
+    padding: 0.45rem 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.05);
+    color: #CBD5E1;
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.18s ease;
+    flex-shrink: 0;
+  }
+  .nav-hamburger:hover { background: rgba(255,255,255,0.1); color: #fff; border-color: rgba(255,255,255,0.25); }
+  .nav-hamburger .hb-icon { font-size: 1rem; line-height: 1; }
+  .nav-active-label {
+    flex: 1;
+    display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;
+    min-width: 0;
+  }
+  .nav-active-chip {
+    display: flex; align-items: center; gap: 0.35rem;
+    font-size: 0.72rem; font-weight: 500;
+    padding: 0.2rem 0.65rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.15);
+    color: #fff;
+    cursor: pointer;
+    transition: opacity 0.15s;
+  }
+  .nav-active-chip:hover { opacity: 0.8; }
+  .nav-active-chip .chip-x { font-size: 0.65rem; opacity: 0.7; margin-left: 0.15rem; }
+
+  /* dropdown panel */
+  .nav-dropdown {
+    display: none;
+    background: rgba(10,22,40,0.99);
+    border-top: 1px solid rgba(255,255,255,0.07);
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+  .nav-dropdown.open { display: block; }
+  .nav-menu-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 0.4rem;
+    padding: 0.85rem 1.5rem;
+  }
+  .nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.03);
+    color: #94A3B8;
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    text-align: left;
+    width: 100%;
+  }
+  .nav-btn:hover { background: rgba(255,255,255,0.08); color: var(--white); border-color: rgba(255,255,255,0.18); }
+  .nav-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  .nav-sep { display: none; }
+  .nav-chevron { font-size: 0.65rem; margin-left: auto; opacity: 0.7; }
+
+  /* Sub-menu — now inline below the button */
+  .nav-group { display: contents; }
+  .nav-submenu {
+    display: none;
+    grid-column: 1 / -1;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 8px;
+    padding: 0.4rem 0.5rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+  }
+  .nav-submenu.open { display: flex; }
+  .nav-sub-btn {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: #CBD5E1;
+    font-family: var(--sans);
+    font-size: 0.73rem;
+    padding: 0.3rem 0.75rem;
+    border-radius: 999px;
+    cursor: pointer;
+    text-align: left;
+    white-space: nowrap;
+    transition: background 0.15s;
+  }
+  .nav-sub-btn:hover { background: rgba(255,255,255,0.12); color: var(--white); }
+
+  /* Notes button */
+  .nav-btn-note {
+    background: rgba(217,119,6,0.12) !important;
+    border-color: rgba(217,119,6,0.3) !important;
+    color: #FCD34D !important;
+  }
+  .nav-btn-note.notes-on {
+    background: #D97706 !important;
+    border-color: #D97706 !important;
+    color: #fff !important;
+  }
+
+  /* ── SECTION TOGGLE ── */
+  .section-block.hidden { display: none; }
+
+  /* ── HIGHLIGHTS ── */
+  mark.hl-yellow { background: #FEF08A; color: #713F12; border-radius: 2px; padding: 0 2px; }
+  mark.hl-blue   { background: #BFDBFE; color: #1e3a8a; border-radius: 2px; padding: 0 2px; }
+  mark.hl-green  { background: #BBF7D0; color: #14532D; border-radius: 2px; padding: 0 2px; }
+
+  /* ── NOTES ── */
+  .para-row {
+    display: grid;
+    grid-template-columns: 1fr 0;
+    gap: 0;
+    transition: grid-template-columns 0.25s ease;
+    margin-bottom: 1.1rem;
+  }
+  .para-row.notes-visible {
+    grid-template-columns: 1fr 240px;
+    gap: 0.75rem;
+  }
+  .para-row p { margin-bottom: 0; }
+  .para-note-col { overflow: hidden; }
+  .para-note-box {
+    display: none;
+    height: 100%;
+    min-height: 70px;
+  }
+  .para-note-box textarea {
+    width: 100%;
+    height: 100%;
+    min-height: 70px;
+    border: 1px solid #BFDBFE;
+    border-radius: 8px;
+    padding: 0.5rem 0.65rem;
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    color: var(--text-mid);
+    background: #F0F9FF;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  .para-note-box textarea:focus { border-color: var(--blue-bright); background: #fff; }
+  .para-note-box textarea::placeholder { color: #94A3B8; }
+  .para-note-save {
+    display: block;
+    margin-top: 0.3rem;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    text-align: right;
+    width: 100%;
+  }
+  .para-note-save:hover { color: var(--blue-bright); }
+  .para-note-save.saved { color: var(--green); }
+  .notes-visible .para-note-box { display: block; }
+
+  /* ── PERTANYAAN ── */
+  .pill-purple { background: #EDE9FE; color: #7C3AED; border: 1px solid #C4B5FD; }
+  .q-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 0.85rem;
+    transition: box-shadow 0.15s;
+  }
+  .q-card:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+  .q-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+    cursor: pointer;
+    user-select: none;
+  }
+  .q-num {
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    background: #EDE9FE;
+    color: #7C3AED;
+    font-size: 0.72rem;
+    font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+  }
+  .q-category-badge {
+    font-size: 0.65rem; font-weight: 600; letter-spacing: 0.08em;
+    text-transform: uppercase; padding: 0.15rem 0.55rem;
+    border-radius: 999px; margin-right: 0.4rem;
+  }
+  .q-cat-utama { background: #FEF3C7; color: #92400E; }
+  .q-cat-studi { background: #DBEAFE; color: #1E40AF; }
+  .q-cat-pribadi { background: #FCE7F3; color: #9D174D; }
+  .q-cat-org { background: #D1FAE5; color: #065F46; }
+  .q-cat-wawasan { background: #F3F4F6; color: #374151; }
+  .q-text { font-size: 0.88rem; font-weight: 600; color: var(--text-dark); line-height: 1.4; flex: 1; }
+  .q-toggle { font-size: 0.75rem; color: var(--slate); flex-shrink: 0; margin-top: 0.15rem; transition: transform 0.2s; }
+  .q-toggle.open { transform: rotate(180deg); }
+  .q-body { display: none; border-top: 1px solid var(--border); }
+  .q-body.open { display: block; }
+  .q-answer-area { padding: 1rem 1.25rem; }
+  .q-answer-label { font-size: 0.68rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: space-between; }
+  .q-answer-text {
+    font-size: 0.85rem; color: var(--text-mid); line-height: 1.7;
+    padding: 0.75rem 1rem;
+    background: #F8FAFC;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    min-height: 60px;
+    white-space: pre-wrap;
+  }
+  .q-answer-edit {
+    width: 100%;
+    font-size: 0.85rem; color: var(--text-mid); line-height: 1.7;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--blue-bright);
+    border-radius: 8px;
+    background: #fff;
+    resize: vertical;
+    min-height: 80px;
+    font-family: var(--sans);
+    outline: none;
+    display: none;
+  }
+  .q-question-edit {
+    width: 100%;
+    font-size: 0.88rem; font-weight: 600;
+    padding: 0.4rem 0.6rem;
+    border: 1px solid #C4B5FD;
+    border-radius: 6px;
+    font-family: var(--sans);
+    outline: none;
+    display: none;
+    color: var(--text-dark);
+    background: #F5F3FF;
+  }
+  .q-btn-row { display: flex; gap: 0.5rem; margin-top: 0.6rem; justify-content: flex-end; }
+  .q-btn {
+    font-size: 0.72rem; font-weight: 500; padding: 0.3rem 0.8rem;
+    border-radius: 6px; border: 1px solid; cursor: pointer;
+    font-family: var(--sans); transition: all 0.15s;
+  }
+  .q-btn-edit { background: #EDE9FE; color: #7C3AED; border-color: #C4B5FD; }
+  .q-btn-edit:hover { background: #7C3AED; color: #fff; }
+  .q-btn-save { background: var(--green); color: #fff; border-color: var(--green); display: none; }
+  .q-btn-save:hover { background: #15803D; }
+  .q-btn-cancel { background: var(--white); color: var(--slate); border-color: var(--border); display: none; }
+  .q-btn-cancel:hover { background: var(--slate-light); }
+  .q-saved-msg { font-size: 0.72rem; color: var(--green); align-self: center; display: none; }
+  .q-filter-bar { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.25rem; }
+  .q-filter-btn {
+    font-size: 0.72rem; font-weight: 500; padding: 0.3rem 0.85rem;
+    border-radius: 999px; border: 1px solid var(--border);
+    background: var(--white); color: var(--text-mid);
+    cursor: pointer; font-family: var(--sans); transition: all 0.15s;
+  }
+  .q-filter-btn.active { background: #7C3AED; color: #fff; border-color: #7C3AED; }
+  .q-search {
+    flex: 1; min-width: 180px;
+    padding: 0.4rem 0.9rem;
+    border: 1px solid var(--border); border-radius: 999px;
+    font-size: 0.8rem; font-family: var(--sans);
+    outline: none; color: var(--text-dark);
+  }
+  .q-search:focus { border-color: #7C3AED; }
+  .fulltext-wrap {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+  }
+  .fulltext-header {
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .fulltext-body {
+    padding: 1.75rem 1.5rem;
+    font-size: 0.9rem;
+    color: var(--text-mid);
+    line-height: 1.85;
+  }
+  .fulltext-body p { margin-bottom: 1.1rem; }
+  .fulltext-body p:last-child { margin-bottom: 0; }
+
+  /* ── DATA DIRI ── */
+  .dd-section { margin-bottom: 2rem; }
+  .dd-section-title {
+    font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em;
+    text-transform: uppercase; color: #0E7490;
+    padding: 0.5rem 0; margin-bottom: 0.75rem;
+    border-bottom: 2px solid #CFFAFE;
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .dd-section-title::before {
+    content: ''; width: 10px; height: 10px; border-radius: 50%;
+    background: #0E7490; flex-shrink: 0;
+  }
+  .dd-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 0.6rem; }
+  .dd-row {
+    display: flex; flex-direction: column; gap: 0.1rem;
+    padding: 0.65rem 0.9rem;
+    background: #F0FDFF;
+    border: 1px solid #CFFAFE;
+    border-radius: 8px;
+  }
+  .dd-row.full { grid-column: 1 / -1; }
+  .dd-label { font-size: 0.67rem; font-weight: 600; color: #0E7490; text-transform: uppercase; letter-spacing: 0.08em; }
+  .dd-value { font-size: 0.875rem; color: var(--text-dark); font-weight: 500; }
+  .dd-value.mono { font-family: monospace; font-size: 0.82rem; }
+
+  /* table style for data diri */
+  .dd-table {
+    width: 100%; border-collapse: collapse; font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+  .dd-table th {
+    background: #CFFAFE; color: #0E7490;
+    font-size: 0.68rem; font-weight: 700; letter-spacing: 0.07em;
+    text-transform: uppercase; padding: 0.5rem 0.75rem;
+    text-align: left; white-space: nowrap;
+    border-bottom: 1px solid #A5F3FC;
+  }
+  .dd-table td {
+    padding: 0.55rem 0.75rem;
+    border-bottom: 1px solid #E0F7FA;
+    color: var(--text-mid); vertical-align: top;
+    line-height: 1.45;
+  }
+  .dd-table tr:last-child td { border-bottom: none; }
+  .dd-table tr:hover td { background: #F0FDFF; }
+  .dd-table-wrap {
+    border: 1px solid #A5F3FC;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 0.25rem;
+    overflow-x: auto;
+  }
+  .dd-badge {
+    display: inline-block; font-size: 0.68rem; font-weight: 600;
+    padding: 0.15rem 0.55rem; border-radius: 999px;
+    background: #CFFAFE; color: #0E7490; border: 1px solid #A5F3FC;
+  }
+  .dd-badge-green { background: #D1FAE5; color: #065F46; border-color: #6EE7B7; }
+  .dd-badge-amber { background: #FEF3C7; color: #92400E; border-color: #FDE68A; }
+  .pill-cyan { background: #CFFAFE; color: #0E7490; border: 1px solid #A5F3FC; }
+
+  /* ── ADD QUESTION BUTTON ── */
+  .q-add-btn {
+    display: flex; align-items: center; gap: 0.5rem;
+    padding: 0.45rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #7C3AED;
+    background: #7C3AED;
+    color: #fff;
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.15s;
+    margin-left: auto;
+  }
+  .q-add-btn:hover { background: #6D28D9; border-color: #6D28D9; box-shadow: 0 2px 10px rgba(124,58,237,0.35); }
+
+  /* ── ADD MODAL ── */
+  .add-modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(10,22,40,0.65);
+    backdrop-filter: blur(4px);
+    z-index: 500;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+  .add-modal-overlay.open { display: flex; }
+  .add-modal {
+    background: var(--white);
+    border-radius: 16px;
+    width: 100%;
+    max-width: 560px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    max-height: 90vh;
+    overflow: hidden;
+    animation: modalIn 0.2s ease;
+  }
+  @keyframes modalIn {
+    from { opacity: 0; transform: translateY(16px) scale(0.97); }
+    to   { opacity: 1; transform: translateY(0)   scale(1); }
+  }
+  .add-modal-header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+  }
+  .add-modal-title {
+    font-family: var(--serif); font-size: 1.1rem; font-weight: 400;
+    color: var(--text-dark);
+  }
+  .add-modal-close {
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: var(--slate-light);
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.15s;
+    flex-shrink: 0;
+  }
+  .add-modal-close:hover { background: #fee2e2; color: #DC2626; border-color: #fca5a5; }
+  .add-modal-body {
+    padding: 1.25rem 1.5rem;
+    overflow-y: auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+  }
+  .add-field { display: flex; flex-direction: column; gap: 0.4rem; }
+  .add-label {
+    font-size: 0.75rem; font-weight: 700; color: var(--text-dark);
+    text-transform: uppercase; letter-spacing: 0.07em;
+  }
+  .add-cat-grid {
+    display: flex; flex-wrap: wrap; gap: 0.45rem;
+  }
+  .add-cat-btn {
+    display: flex; align-items: center; gap: 0.4rem;
+    padding: 0.4rem 0.85rem;
+    border-radius: 999px;
+    border: 1.5px solid var(--border);
+    background: var(--white);
+    color: var(--text-mid);
+    font-family: var(--sans);
+    font-size: 0.78rem; font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .add-cat-btn:hover { border-color: #7C3AED; color: #7C3AED; background: #F5F3FF; }
+  .add-cat-btn.active { border-color: #7C3AED; background: #EDE9FE; color: #5B21B6; font-weight: 600; }
+  .add-cat-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+  .add-textarea {
+    width: 100%;
+    padding: 0.7rem 0.9rem;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    font-family: var(--sans);
+    font-size: 0.875rem;
+    color: var(--text-dark);
+    line-height: 1.6;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.15s;
+    background: #FAFBFC;
+  }
+  .add-textarea:focus { border-color: #7C3AED; background: #fff; box-shadow: 0 0 0 3px rgba(124,58,237,0.08); }
+  .add-textarea::placeholder { color: #94A3B8; }
+  .add-modal-footer {
+    display: flex; gap: 0.75rem; justify-content: flex-end;
+    padding: 1rem 1.5rem;
+    border-top: 1px solid var(--border);
+    flex-shrink: 0;
+  }
+  .add-btn-cancel {
+    padding: 0.55rem 1.2rem; border-radius: 8px;
+    border: 1px solid var(--border); background: var(--white);
+    color: var(--text-mid); font-family: var(--sans);
+    font-size: 0.83rem; font-weight: 500; cursor: pointer;
+    transition: all 0.15s;
+  }
+  .add-btn-cancel:hover { background: var(--slate-light); }
+  .add-btn-save {
+    padding: 0.55rem 1.4rem; border-radius: 8px;
+    border: 1px solid #7C3AED; background: #7C3AED;
+    color: #fff; font-family: var(--sans);
+    font-size: 0.83rem; font-weight: 600; cursor: pointer;
+    transition: all 0.15s;
+  }
+  .add-btn-save:hover { background: #6D28D9; border-color: #6D28D9; }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-tag">Infografis Essay LPDP 2025</div>
+  <h1>Membangun <em>Ketahanan Siber</em> Pemerintah melalui AI</h1>
+  <p class="hero-sub">Analisis dua essay Fauzan Budi Setiawan – Personal Statement & Essay Komitmen</p>
+  <div class="hero-meta">
+    <div class="hero-meta-item"><span class="val">2</span><span class="lbl">Essay</span></div>
+    <div class="divider-hero"></div>
+    <div class="hero-meta-item"><span class="val">BSSN</span><span class="lbl">Instansi</span></div>
+    <div class="divider-hero"></div>
+    <div class="hero-meta-item"><span class="val">MTI UGM</span><span class="lbl">Program Tujuan</span></div>
+    <div class="divider-hero"></div>
+    <div class="hero-meta-item"><span class="val">Cybersec AI</span><span class="lbl">Fokus Riset</span></div>
+  </div>
+</div>
+
+<!-- STICKY NAV -->
+<nav class="sticky-nav">
+  <!-- Top bar: brand + active chips + hamburger -->
+  <div class="nav-topbar">
+    <div class="nav-brand">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#93C5FD" stroke-width="1.5"/><path d="M5 8h6M8 5v6" stroke="#93C5FD" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <span>Infografis LPDP</span> — <span>Fauzan Budi Setiawan</span>
+    </div>
+    <div class="nav-active-label" id="nav-active-label">
+      <span style="font-size:0.72rem;color:#64748B;flex-shrink:0;">Pilih menu di bawah untuk menampilkan konten</span>
+    </div>
+    <button class="nav-hamburger" onclick="toggleNavDropdown()" id="nav-hamburger">
+      <span class="hb-icon" id="hb-icon">☰</span>
+      <span id="hb-label">Menu</span>
+    </button>
+  </div>
+
+  <!-- Dropdown grid -->
+  <div class="nav-dropdown" id="nav-dropdown">
+    <div class="nav-menu-grid">
+      <!-- Full Text -->
+      <button class="nav-btn" id="btn-fulltext" onclick="toggleSection('fulltext')">
+        <span class="nav-dot" style="background:#D97706;"></span>Full Text Essay
+      </button>
+
+      <!-- Perbandingan -->
+      <button class="nav-btn" id="btn-perbandingan" onclick="toggleSection('perbandingan')">
+        <span class="nav-dot" style="background:#475569;"></span>Perbandingan Outline
+      </button>
+
+      <!-- Personal Statement -->
+      <div class="nav-group" id="navgroup-ps">
+        <button class="nav-btn" id="btn-ps" onclick="toggleSection('ps')">
+          <span class="nav-dot" style="background:#2563EB;"></span>Personal Statement
+          <span class="nav-chevron" id="chev-ps">▾</span>
+        </button>
+        <div class="nav-submenu" id="sub-ps">
+          <button class="nav-sub-btn" onclick="scrollToSub('ps-sub1')">① Latar Belakang</button>
+          <button class="nav-sub-btn" onclick="scrollToSub('ps-sub2')">② Pengalaman BSSN</button>
+          <button class="nav-sub-btn" onclick="scrollToSub('ps-sub3')">③ Gap &amp; Temuan</button>
+          <button class="nav-sub-btn" onclick="scrollToSub('ps-sub4')">④ Alasan Studi</button>
+        </div>
+      </div>
+
+      <!-- Essay Komitmen -->
+      <div class="nav-group" id="navgroup-komitmen">
+        <button class="nav-btn" id="btn-komitmen" onclick="toggleSection('komitmen')">
+          <span class="nav-dot" style="background:#0D9488;"></span>Essay Komitmen
+          <span class="nav-chevron" id="chev-komitmen">▾</span>
+        </button>
+        <div class="nav-submenu" id="sub-komitmen">
+          <button class="nav-sub-btn" onclick="scrollToSub('ek-sub1')">① Konteks Nasional</button>
+          <button class="nav-sub-btn" onclick="scrollToSub('ek-sub2')">② Solusi AI/ML</button>
+          <button class="nav-sub-btn" onclick="scrollToSub('ek-sub3')">③ Rencana Studi</button>
+          <button class="nav-sub-btn" onclick="scrollToSub('ek-sub4')">④ Kontribusi</button>
+        </div>
+      </div>
+
+      <!-- Keterkaitan -->
+      <button class="nav-btn" id="btn-keterkaitan" onclick="toggleSection('keterkaitan')">
+        <span class="nav-dot" style="background:#16A34A;"></span>Keterkaitan Kedua Essay
+      </button>
+
+      <!-- List Pertanyaan -->
+      <button class="nav-btn" id="btn-pertanyaan" onclick="toggleSection('pertanyaan')">
+        <span class="nav-dot" style="background:#7C3AED;"></span>List Pertanyaan Wawancara
+      </button>
+
+      <!-- Data Diri -->
+      <button class="nav-btn" id="btn-datadiri" onclick="toggleSection('datadiri')">
+        <span class="nav-dot" style="background:#0E7490;"></span>Data Diri
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="page">
+
+  <!-- PROFILE -->
+  <div class="profile-banner">
+    <div class="profile-avatar">F</div>
+    <div class="profile-info" style="flex:1; min-width:220px;">
+      <h2>Fauzan Budi Setiawan</h2>
+      <p>ASN BSSN · Manggala Informatika Ahli Pertama · Lulusan PoltekSSN 2021 (Cum Laude, IPK 3.73)</p>
+      <div class="profile-tags">
+        <span class="tag tag-blue">Keamanan Siber</span>
+        <span class="tag tag-teal">Machine Learning</span>
+        <span class="tag tag-blue">ITSA</span>
+        <span class="tag tag-teal">TTIS</span>
+        <span class="tag tag-navy">IoT Security</span>
+        <span class="tag tag-navy">Kriptografi</span>
+      </div>
+    </div>
+    <div style="min-width:200px;">
+      <div style="font-size:0.72rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.5rem;">Sertifikasi</div>
+      <div class="chip-row">
+        <span class="chip">Google Cybersecurity</span>
+        <span class="chip">EC-Council EHE</span>
+        <span class="chip">Alibaba ACP Big Data</span>
+        <span class="chip">CAP (AppSec)</span>
+        <span class="chip">COSITE IEEE</span>
+        <span class="chip">DJKI Hak Cipta</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       PERBANDINGAN OUTLINE KEDUA ESSAY
+  ══════════════════════════════════════════ -->
+  <div id="section-perbandingan" class="section-block">
+  <div class="section-label">
+    <span class="pill pill-navy">Tinjauan Awal</span>
+    <h2>Perbandingan Outline Kedua Essay</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="card" style="margin-bottom:1rem;">
+    <p style="font-size:0.9rem; color:var(--text-mid); line-height:1.7; margin-bottom:1.5rem;">Sebelum menyelami masing-masing essay secara mendalam, penting untuk melihat keduanya secara berdampingan. <em>Personal Statement</em> dan <em>Essay Komitmen</em> ditulis dengan sudut pandang yang berbeda namun saling melengkapi—keduanya bukan dua dokumen terpisah, melainkan dua sisi dari satu argumen yang sama. Personal Statement bergerak dari dalam ke luar: dimulai dari siapa Fauzan, bagaimana ia dibentuk, dan mengapa ia sampai pada titik ini. Essay Komitmen bergerak dari luar ke dalam: dimulai dari masalah nasional yang nyata, lalu menunjukkan bagaimana Fauzan secara spesifik akan berkontribusi memecahkan masalah itu.</p>
+
+    <!-- COMPARISON TABLE HEADER -->
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:0; border:1px solid var(--border); border-radius:12px; overflow:hidden;">
+
+      <!-- Header -->
+      <div style="background:var(--slate-light); padding:0.75rem 1rem; border-bottom:1px solid var(--border); border-right:1px solid var(--border);">
+        <div style="font-size:0.68rem; font-weight:700; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.1em;">Dimensi</div>
+      </div>
+      <div style="background:var(--blue-pale); padding:0.75rem 1rem; border-bottom:1px solid var(--border); border-right:1px solid var(--border);">
+        <span class="pill pill-blue" style="font-size:0.65rem;">Essay 01</span>
+        <div style="font-size:0.82rem; font-weight:600; color:var(--navy-2); margin-top:0.3rem;">Personal Statement</div>
+      </div>
+      <div style="background:var(--teal-light); padding:0.75rem 1rem; border-bottom:1px solid var(--border);">
+        <span class="pill pill-teal" style="font-size:0.65rem;">Essay 02</span>
+        <div style="font-size:0.82rem; font-weight:600; color:#134E4A; margin-top:0.3rem;">Essay Komitmen</div>
+      </div>
+
+      <!-- Row 1 -->
+      <div style="padding:0.9rem 1rem; border-bottom:1px solid var(--border); border-right:1px solid var(--border); background:var(--white);">
+        <div style="font-size:0.75rem; font-weight:600; color:var(--text-dark);">Pertanyaan Inti</div>
+      </div>
+      <div style="padding:0.9rem 1rem; border-bottom:1px solid var(--border); border-right:1px solid var(--border); background:var(--white);">
+        <p style="font-size:0.8rem; color:var(--text-mid); line-height:1.5;"><em>"Siapa saya dan mengapa saya layak?"</em> — Membangun identitas, rekam jejak, dan motivasi personal yang autentik berdasarkan pengalaman nyata.</p>
+      </div>
+      <div style="padding:0.9rem 1rem; border-bottom:1px solid var(--border); background:var(--white);">
+        <p style="font-size:0.8rem; color:var(--text-mid); line-height:1.5;"><em>"Apa yang akan saya lakukan dan mengapa ini penting?"</em> — Membuktikan relevansi studi dengan masalah nasional dan memetakan kontribusi yang terukur.</p>
+      </div>
+
+      <!-- Row 2 -->
+      <div style="padding:0.9rem 1rem; border-bottom:1px solid var(--border); border-right:1px solid var(--border); background:var(--slate-light);">
+        <div style="font-size:0.75rem; font-weight:600; color:var(--text-dark);">Titik Awal Narasi</div>
+      </div>
+      <div style="padding:0.9rem 1rem; border-bottom:1px solid var(--border); border-right:1px solid var(--border); background:var(--slate-light);">
+        <p style="font-size:0.8rem; color:var(--text-mid); line-height:1.5;">Individu — dimulai dari keluarga, nilai, dan perjalanan pribadi menuju dunia keamanan siber profesional.</p>
+      </div>
+      <div style="padding:0.9rem 1rem; border-bottom:1px solid var(--border); background:var(--slate-light);">
+        <p style="font-size:0.8rem; color:var(--text-mid); line-height:1.5;">Masalah nasional — dimulai dari kutipan lapangan dan data statistik yang menggambarkan krisis keamanan siber pemda secara makro.</p>
+      </div>
+
+      <!-- Row 3 -->
+      <div style="padding:0.9rem 1rem; border-bottom:1px solid var(--border); border-right:1px solid var(--border); background:var(--white);">
+        <div style="font-size:0.75rem; font-weight:600; color:var(--text-dark);">Struktur Logika</div>
+      </div>
+      <div style="padding:0.9rem 1rem; border-bottom:1px solid var(--border); border-right:1px solid var(--border); background:var(--white);">
+        <p style="font-size:0.8rem; color:var(--text-mid); line-height:1.5;">Kronologis & kausal — setiap pengalaman membangun kapabilitas berikutnya; asrama → ITSA → TTIS → gap ML/AI → butuh studi magister.</p>
+      </div>
+      <div style="padding:0.9rem 1rem; border-bottom:1px solid var(--border); background:var(--white);">
+        <p style="font-size:0.8rem; color:var(--text-mid); line-height:1.5;">Problem-solution-impact — masalah siber nasional diidentifikasi, solusi ML/AI diusulkan, lalu peta kontribusi nyata dirancang secara bertahap.</p>
+      </div>
+
+      <!-- Row 4 -->
+      <div style="padding:0.9rem 1rem; border-bottom:1px solid var(--border); border-right:1px solid var(--border); background:var(--slate-light);">
+        <div style="font-size:0.75rem; font-weight:600; color:var(--text-dark);">Bukti yang Ditonjolkan</div>
+      </div>
+      <div style="padding:0.9rem 1rem; border-bottom:1px solid var(--border); border-right:1px solid var(--border); background:var(--slate-light);">
+        <p style="font-size:0.8rem; color:var(--text-mid); line-height:1.5;">Prestasi akademik (IPK 3.73, Top 3, IEEE, DJKI), sertifikasi profesional, dan keterlibatan langsung dalam agenda strategis nasional (HUT RI, Pemilu).</p>
+      </div>
+      <div style="padding:0.9rem 1rem; border-bottom:1px solid var(--border); background:var(--slate-light);">
+        <p style="font-size:0.8rem; color:var(--text-mid); line-height:1.5;">Data laporan nasional (BSSN 2024–2025), kutipan observasi langsung, dan rancangan program konkret dengan target yang spesifik dan terukur.</p>
+      </div>
+
+      <!-- Row 5 -->
+      <div style="padding:0.9rem 1rem; border-right:1px solid var(--border); background:var(--white);">
+        <div style="font-size:0.75rem; font-weight:600; color:var(--text-dark);">Muara / Penutup</div>
+      </div>
+      <div style="padding:0.9rem 1rem; border-right:1px solid var(--border); background:var(--white);">
+        <p style="font-size:0.8rem; color:var(--text-mid); line-height:1.5;">Gap keilmuan yang dikenali sendiri → studi magister sebagai langkah logis dan bertanggung jawab untuk mengisinya secara sistematis.</p>
+      </div>
+      <div style="padding:0.9rem 1rem; background:var(--white);">
+        <p style="font-size:0.8rem; color:var(--text-mid); line-height:1.5;">Visi jangka panjang ekosistem siber nasional → LPDP bukan sekadar beasiswa, melainkan amanah yang harus dikembalikan dalam bentuk pengabdian nyata.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- OUTLINE SIDE-BY-SIDE -->
+  <div class="card" style="margin-bottom:2rem;">
+    <div style="font-size:0.72rem; font-weight:600; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:1.25rem;">Outline Berdampingan – Alur & Penjelasan Tiap Bagian</div>
+    <p style="font-size:0.875rem; color:var(--text-mid); margin-bottom:1.5rem; line-height:1.7;">Kedua essay masing-masing terdiri dari empat bagian utama. Menariknya, keempat bagian tersebut memiliki korespondensi tematik yang kuat satu sama lain—bukan kebetulan, melainkan mencerminkan konsistensi cara berpikir penulis. Bagian pertama keduanya membangun konteks, bagian kedua mempresentasikan kondisi dan kemampuan yang relevan, bagian ketiga mengidentifikasi gap atau solusi, dan bagian keempat membentangkan rencana konkret ke depan.</p>
+
+    <div style="display:grid; grid-template-columns:1fr 40px 1fr; gap:1rem; align-items:start;">
+
+      <!-- PS Column -->
+      <div>
+        <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:1rem; padding-bottom:0.75rem; border-bottom:2px solid var(--blue-bright);">
+          <span class="pill pill-blue" style="font-size:0.65rem;">Essay 01</span>
+          <span style="font-size:0.85rem; font-weight:600; color:var(--navy-2);">Personal Statement</span>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:0.75rem;">
+
+          <div style="border:1px solid var(--blue-light); border-radius:10px; overflow:hidden;">
+            <div style="background:var(--blue-pale); padding:0.6rem 1rem; display:flex; align-items:center; gap:0.5rem;">
+              <div class="outline-num num-blue" style="width:24px;height:24px;font-size:0.7rem;flex-shrink:0;">01</div>
+              <span style="font-size:0.82rem; font-weight:600; color:var(--navy-2);">Latar Belakang & Karakter</span>
+            </div>
+            <div style="padding:0.75rem 1rem;">
+              <p style="font-size:0.78rem; color:var(--text-mid); line-height:1.55;">Memperkenalkan Fauzan bukan dari CV-nya, melainkan dari nilai-nilai yang membentuknya—keluarga guru, asrama semimiliter PoltekSSN, dan momen pertama jatuh cinta pada keamanan siber saat mengerjakan proyek IoT. Ini adalah fondasi karakter, bukan sekadar latar belakang pendidikan.</p>
+            </div>
+          </div>
+
+          <div style="border:1px solid #99F6E4; border-radius:10px; overflow:hidden;">
+            <div style="background:var(--teal-light); padding:0.6rem 1rem; display:flex; align-items:center; gap:0.5rem;">
+              <div class="outline-num num-teal" style="width:24px;height:24px;font-size:0.7rem;flex-shrink:0;">02</div>
+              <span style="font-size:0.82rem; font-weight:600; color:#134E4A;">Pengalaman Profesional BSSN</span>
+            </div>
+            <div style="padding:0.75rem 1rem;">
+              <p style="font-size:0.78rem; color:var(--text-mid); line-height:1.55;">Memaparkan tiga fase penugasan yang sangat berbeda—offensive security (ITSA), pengasuhan karakter (PMK), dan pembinaan siber daerah (TTIS)—untuk menunjukkan fleksibilitas, ketahanan belajar, dan kemampuan adaptasi sebagai profesional yang terus berkembang.</p>
+            </div>
+          </div>
+
+          <div style="border:1px solid #FDE68A; border-radius:10px; overflow:hidden;">
+            <div style="background:var(--amber-light); padding:0.6rem 1rem; display:flex; align-items:center; gap:0.5rem;">
+              <div class="outline-num num-amber" style="width:24px;height:24px;font-size:0.7rem;flex-shrink:0;">03</div>
+              <span style="font-size:0.82rem; font-weight:600; color:#78350F;">Peran Saat Ini & Gap yang Ditemukan</span>
+            </div>
+            <div style="padding:0.75rem 1rem;">
+              <p style="font-size:0.78rem; color:var(--text-mid); line-height:1.55;">Menceritakan realitas di Direktorat Keamanan Siber Pemda dan mengakui secara jujur keterbatasan pemahaman ML/AI yang sistematis. Pengakuan ini bukan kelemahan—justru menunjukkan kedewasaan intelektual yang menjadi motivasi kuat dan autentik untuk melanjutkan studi.</p>
+            </div>
+          </div>
+
+          <div style="border:1px solid #FCC9B5; border-radius:10px; overflow:hidden;">
+            <div style="background:var(--coral-light); padding:0.6rem 1rem; display:flex; align-items:center; gap:0.5rem;">
+              <div class="outline-num num-coral" style="width:24px;height:24px;font-size:0.7rem;flex-shrink:0;">04</div>
+              <span style="font-size:0.82rem; font-weight:600; color:#7C2D12;">Alasan & Kesiapan Studi Magister</span>
+            </div>
+            <div style="padding:0.75rem 1rem;">
+              <p style="font-size:0.78rem; color:var(--text-mid); line-height:1.55;">Menjelaskan mengapa MTI UGM adalah pilihan yang bukan sekadar logis, tetapi strategis—kurikulum Network & Cybersecurity, ekosistem riset UGM AI Center, dan disiplin pribadi yang telah terbukti menjadi modal akademik yang kuat.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Center connector -->
+      <div style="display:flex; flex-direction:column; align-items:center; padding-top:3.5rem; gap:0.4rem;">
+        <div style="font-size:0.6rem; color:var(--text-muted); writing-mode:vertical-rl; text-orientation:mixed; letter-spacing:0.08em; text-transform:uppercase; opacity:0.6;">Korespondensi</div>
+        <div style="flex:1; width:1px; background:repeating-linear-gradient(to bottom, var(--border) 0, var(--border) 6px, transparent 6px, transparent 12px);"></div>
+      </div>
+
+      <!-- Komitmen Column -->
+      <div>
+        <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:1rem; padding-bottom:0.75rem; border-bottom:2px solid var(--teal);">
+          <span class="pill pill-teal" style="font-size:0.65rem;">Essay 02</span>
+          <span style="font-size:0.85rem; font-weight:600; color:#134E4A;">Essay Komitmen</span>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:0.75rem;">
+
+          <div style="border:1px solid var(--blue-light); border-radius:10px; overflow:hidden;">
+            <div style="background:var(--blue-pale); padding:0.6rem 1rem; display:flex; align-items:center; gap:0.5rem;">
+              <div class="outline-num num-blue" style="width:24px;height:24px;font-size:0.7rem;flex-shrink:0;">01</div>
+              <span style="font-size:0.82rem; font-weight:600; color:var(--navy-2);">Konteks Masalah Nasional</span>
+            </div>
+            <div style="padding:0.75rem 1rem;">
+              <p style="font-size:0.78rem; color:var(--text-mid); line-height:1.55;">Membuka dengan kutipan langsung dari lapangan dan didukung data laporan BSSN 2024–2025. Bagian ini berfungsi seperti pendahuluan riset: membangun urgensi mengapa masalah ini penting dan mengapa solusinya tidak bisa ditunda. Cerminan dari realita yang Fauzan saksikan di PS.</p>
+            </div>
+          </div>
+
+          <div style="border:1px solid #99F6E4; border-radius:10px; overflow:hidden;">
+            <div style="background:var(--teal-light); padding:0.6rem 1rem; display:flex; align-items:center; gap:0.5rem;">
+              <div class="outline-num num-teal" style="width:24px;height:24px;font-size:0.7rem;flex-shrink:0;">02</div>
+              <span style="font-size:0.82rem; font-weight:600; color:#134E4A;">Solusi: Integrasi AI & ML</span>
+            </div>
+            <div style="padding:0.75rem 1rem;">
+              <p style="font-size:0.78rem; color:var(--text-mid); line-height:1.55;">Mengusulkan pergeseran paradigma dari keamanan reaktif berbasis aturan menuju sistem prediktif berbasis ML. Ini adalah jawaban atas gap teknis yang diakui di PS—bukan hanya keluhan, melainkan diagnosa yang sudah disertai resep solusi yang spesifik dan argumentatif.</p>
+            </div>
+          </div>
+
+          <div style="border:1px solid #FDE68A; border-radius:10px; overflow:hidden;">
+            <div style="background:var(--amber-light); padding:0.6rem 1rem; display:flex; align-items:center; gap:0.5rem;">
+              <div class="outline-num num-amber" style="width:24px;height:24px;font-size:0.7rem;flex-shrink:0;">03</div>
+              <span style="font-size:0.82rem; font-weight:600; color:#78350F;">Rencana Studi di UGM</span>
+            </div>
+            <div style="padding:0.75rem 1rem;">
+              <p style="font-size:0.78rem; color:var(--text-mid); line-height:1.55;">Merancang dua tahun studi secara konkret: tahun pertama untuk membangun fondasi keilmuan dan jejaring, tahun kedua untuk menghasilkan tesis dengan prototipe yang langsung dapat diimplementasikan di pemda. Ini menjawab "bagaimana" pilihan MTI UGM di PS akan dijalankan.</p>
+            </div>
+          </div>
+
+          <div style="border:1px solid #BBF7D0; border-radius:10px; overflow:hidden;">
+            <div style="background:var(--green-light); padding:0.6rem 1rem; display:flex; align-items:center; gap:0.5rem;">
+              <div class="outline-num num-green" style="width:24px;height:24px;font-size:0.7rem;flex-shrink:0;">04</div>
+              <span style="font-size:0.82rem; font-weight:600; color:#14532D;">Rencana Kontribusi Pasca-Studi</span>
+            </div>
+            <div style="padding:0.75rem 1rem;">
+              <p style="font-size:0.78rem; color:var(--text-mid); line-height:1.55;">Memetakan kontribusi dalam tiga cakrawala waktu—pendek (diseminasi & pelatihan BSSN), menengah (pilot implementasi & mengajar PoltekSSN), panjang (ekosistem riset nasional & standardisasi TTIS)—sebagai bukti bahwa studi ini bukan untuk diri sendiri, melainkan untuk negara.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Korespondensi summary -->
+    <div style="margin-top:1.5rem; padding:1.25rem; background:var(--slate-light); border-radius:12px; border:1px solid var(--border);">
+      <div style="font-size:0.72rem; font-weight:700; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:0.75rem;">Pola Korespondensi Antar Bagian</div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:0.75rem;">
+        <div style="font-size:0.78rem; color:var(--text-mid); padding:0.75rem; background:var(--white); border-radius:8px; border:1px solid var(--border);">
+          <span style="font-weight:600; color:var(--blue-bright);">Bagian 1 ↔ 1</span><br>
+          PS membangun <em>konteks personal</em>; Essay Komitmen membangun <em>konteks nasional</em>. Keduanya membuka cerita dari dua sudut yang kemudian bertemu di satu titik masalah yang sama.
+        </div>
+        <div style="font-size:0.78rem; color:var(--text-mid); padding:0.75rem; background:var(--white); border-radius:8px; border:1px solid var(--border);">
+          <span style="font-weight:600; color:var(--teal);">Bagian 2 ↔ 2</span><br>
+          PS membuktikan <em>kemampuan teknis</em> lewat pengalaman; Essay Komitmen mentransformasikan kemampuan itu menjadi <em>solusi strategis</em> berbasis ML/AI yang argumentatif.
+        </div>
+        <div style="font-size:0.78rem; color:var(--text-mid); padding:0.75rem; background:var(--white); border-radius:8px; border:1px solid var(--border);">
+          <span style="font-weight:600; color:var(--amber);">Bagian 3 ↔ 3</span><br>
+          PS mengidentifikasi <em>gap keilmuan</em> sebagai motivasi jujur; Essay Komitmen mengisi gap itu dengan <em>rencana studi konkret</em> yang terstruktur dan berorientasi output.
+        </div>
+        <div style="font-size:0.78rem; color:var(--text-mid); padding:0.75rem; background:var(--white); border-radius:8px; border:1px solid var(--border);">
+          <span style="font-weight:600; color:var(--green);">Bagian 4 ↔ 4</span><br>
+          PS menetapkan <em>pilihan program studi</em> secara rasional; Essay Komitmen menjabarkan <em>dampak pasca-studi</em> dalam tiga horizon waktu yang terukur dan berkelanjutan.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div><!-- /section-perbandingan -->
+
+  <!-- ══════════════════════════════════════════
+       ESSAY 1 – PERSONAL STATEMENT
+  ══════════════════════════════════════════ -->
+  <div id="section-ps" class="section-block">
+  <div class="section-label">
+    <span class="pill pill-blue">Essay 01</span>
+    <h2>Personal Statement</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <!-- OUTLINE PS -->
+  <div style="margin-bottom:1.25rem;">
+    <div style="font-size:0.72rem; font-weight:600; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:0.75rem;">Outline Essay</div>
+    <div class="card-grid card-grid-2">
+
+      <div class="outline-card">
+        <div class="outline-card-header">
+          <div class="outline-num num-blue">01</div>
+          <div>
+            <h3>Latar Belakang & Pembentukan Karakter</h3>
+            <p>Akar identitas – keluarga, pendidikan semimiliter, nilai disiplin</p>
+          </div>
+        </div>
+        <div class="outline-body">
+          <ul>
+            <li>Keluarga guru sebagai fondasi nilai pendidikan dan tanggung jawab</li>
+            <li>Pendidikan berasrama PoltekSSN – disiplin, adaptasi, ketekunan</li>
+            <li>Ketertarikan siber sejak Semester 4 melalui IoT & CIA Triad</li>
+            <li>Proyek akhir ECC untuk keamanan IoT – IEEE COSITE & Hak Cipta DJKI</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="outline-card">
+        <div class="outline-card-header">
+          <div class="outline-num num-teal">02</div>
+          <div>
+            <h3>Pengalaman Profesional di BSSN</h3>
+            <p>Tiga unit kerja – ofensif, pembinaan, operasional</p>
+          </div>
+        </div>
+        <div class="outline-body">
+          <ul>
+            <li>ITSA – beralih ke pola pikir ofensif secara otodidak</li>
+            <li>Pengamanan HUT RI ke-77 & sistem Pemilu Presiden 2024</li>
+            <li>PMK PoltekSSN – pengajaran, MC wisuda, mengatasi public speaking</li>
+            <li>Latsitardanus XLIV 2024 Kalimantan Timur – kolaborasi lintas institusi</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="outline-card">
+        <div class="outline-card-header">
+          <div class="outline-num num-amber">03</div>
+          <div>
+            <h3>Peran Saat Ini & Kesenjangan yang Ditemukan</h3>
+            <p>Direktorat Keamanan Siber Pemda – realita di lapangan</p>
+          </div>
+        </div>
+        <div class="outline-body">
+          <ul>
+            <li>Pembentukan & penguatan TTIS 552 pemerintah daerah</li>
+            <li>Pengolahan data evaluasi TTIS 2025 → laporan strategis</li>
+            <li>Kesenjangan kapasitas: SDM, infrastruktur, tata kelola</li>
+            <li>Keterbatasan pemahaman ML/AI yang mendalam dan sistematis</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="outline-card">
+        <div class="outline-card-header">
+          <div class="outline-num num-coral">04</div>
+          <div>
+            <h3>Alasan & Kesiapan Melanjutkan Studi Magister</h3>
+            <p>MTI UGM – Network and Cybersecurity</p>
+          </div>
+        </div>
+        <div class="outline-body">
+          <ul>
+            <li>Kebutuhan merancang sistem keamanan adaptif berbasis ML/AI</li>
+            <li>Disiplin dan manajemen waktu sebagai modal akademik</li>
+            <li>Pengalaman riset + kerja kebijakan = kesiapan studi terstruktur</li>
+            <li>LPDP sebagai enabler akses pendidikan & jejaring riset nasional</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- DETAIL PS -->
+  <div class="card" style="margin-bottom:1.5rem;">
+    <div style="font-size:0.72rem; font-weight:600; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:1.25rem;">Penjabaran Isi Per Outline</div>
+
+    <!-- 01 -->
+    <div style="margin-bottom:2rem;">
+      <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem;">
+        <div class="outline-num num-blue" style="width:28px;height:28px;font-size:0.75rem;">01</div>
+        <h3 style="font-family:var(--serif); font-size:1rem; font-weight:400;">Latar Belakang & Pembentukan Karakter</h3>
+      </div>
+      <p style="font-size:0.875rem; color:var(--text-mid); margin-bottom:0.75rem;">Fauzan membangun fondasi karakternya dari dua sumber utama: keluarga guru yang menjunjung tinggi pendidikan, dan lingkungan semimiliter berasrama PoltekSSN. Lingkungan asrama membentuk disiplin waktu dan kemampuan adaptasi yang kemudian menjadi aset utama di dunia kerja. Ketertarikan pada cybersecurity bermula konkret di Semester 4 saat mengerjakan keamanan IoT—bukan sekadar minat abstrak.</p>
+      <div class="quote-block">
+        <p>"Keunggulan teknis perlu dilengkapi dengan karakter baik dan jiwa kepemimpinan untuk menjadi sumber daya manusia yang utuh."</p>
+      </div>
+      <div class="stat-grid" style="margin-top:1rem;">
+        <div class="stat-card"><div class="stat-val" style="color:var(--blue-bright);">3.73</div><div class="stat-lbl">IPK Cum Laude</div></div>
+        <div class="stat-card"><div class="stat-val" style="color:var(--blue-bright);">Top 3</div><div class="stat-lbl">Mahasiswa IPK Terbaik 8 Semester</div></div>
+        <div class="stat-card"><div class="stat-val" style="color:var(--blue-bright);">IEEE</div><div class="stat-lbl">Prosiding COSITE USK</div></div>
+        <div class="stat-card"><div class="stat-val" style="color:var(--blue-bright);">DJKI</div><div class="stat-lbl">Hak Cipta Terdaftar</div></div>
+      </div>
+    </div>
+
+    <div style="height:1px; background:var(--border); margin-bottom:2rem;"></div>
+
+    <!-- 02 -->
+    <div style="margin-bottom:2rem;">
+      <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem;">
+        <div class="outline-num num-teal" style="width:28px;height:28px;font-size:0.75rem;">02</div>
+        <h3 style="font-family:var(--serif); font-size:1rem; font-weight:400;">Pengalaman Profesional – Tiga Fase di BSSN</h3>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot dot-blue"></div>
+          <span class="timeline-badge pill-blue" style="display:inline-block; font-size:0.65rem; padding:0.15rem 0.6rem; border-radius:999px; background:var(--blue-pale); color:var(--blue-bright); border:1px solid var(--blue-light);">2021 – 2023</span>
+          <h4>Direktorat Operasi Keamanan Siber – Tim ITSA</h4>
+          <p>Beralih dari defensive ke offensive mindset secara otodidak. Belajar Linux, membuat lab virtual, mengeksekusi IT Security Assessment mandiri. Terlibat pengamanan HUT RI ke-77 dan sistem aplikasi Pemilu 2024.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot dot-amber"></div>
+          <span class="timeline-badge" style="display:inline-block; font-size:0.65rem; padding:0.15rem 0.6rem; border-radius:999px; background:var(--amber-light); color:var(--amber); border:1px solid #FDE68A;">2023 – 2024</span>
+          <h4>Unit PMK PoltekSSN</h4>
+          <p>Mengampu mata kuliah Etos Sandi, MC wisuda & pelantikan. Secara sadar melatih public speaking dengan mencatat pertanyaan sejak awal diskusi dan berkomitmen menyampaikan minimal satu pertanyaan per forum.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot dot-teal"></div>
+          <span class="timeline-badge" style="display:inline-block; font-size:0.65rem; padding:0.15rem 0.6rem; border-radius:999px; background:var(--teal-light); color:var(--teal); border:1px solid #99F6E4;">2024 – Sekarang</span>
+          <h4>Direktorat Keamanan Siber Pemda – Tim TTIS</h4>
+          <p>Pembentukan dan penguatan Tim Tanggap Insiden Siber di seluruh Indonesia. Memimpin pengolahan data survei evaluasi TTIS 2025 dari ratusan pemerintah daerah menjadi laporan rekomendasi strategis.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot dot-green"></div>
+          <span class="timeline-badge" style="display:inline-block; font-size:0.65rem; padding:0.15rem 0.6rem; border-radius:999px; background:var(--green-light); color:var(--green); border:1px solid #BBF7D0;">2024</span>
+          <h4>Latsitardanus XLIV – Kalimantan Timur</h4>
+          <p>Pembina taruna dari 7 institusi kedinasan militer & sipil. Mendampingi pengabdian masyarakat di Kab. Paser, memperluas perspektif pengembangan SDM holistik.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="height:1px; background:var(--border); margin-bottom:2rem;"></div>
+
+    <!-- 03 -->
+    <div style="margin-bottom:2rem;">
+      <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem;">
+        <div class="outline-num num-amber" style="width:28px;height:28px;font-size:0.75rem;">03</div>
+        <h3 style="font-family:var(--serif); font-size:1rem; font-weight:400;">Realitas Lapangan & Kesenjangan yang Ditemukan</h3>
+      </div>
+      <p style="font-size:0.875rem; color:var(--text-mid); margin-bottom:1rem;">Dari interaksi langsung dengan ratusan pemerintah daerah, Fauzan menemukan pola kesenjangan yang konsisten: keterbatasan SDM dan infrastruktur membuat sistem keamanan tetap reaktif dan berbasis aturan statis. Kondisi ini mendorong keyakinan bahwa pendekatan ML/AI adalah solusi yang relevan dan strategis.</p>
+      <div class="card-grid card-grid-3" style="gap:0.75rem;">
+        <div class="card" style="border-color:var(--blue-light); background:var(--blue-pale);">
+          <div style="font-size:1.4rem; font-weight:700; color:var(--blue-bright); margin-bottom:0.3rem;">SDM</div>
+          <p style="font-size:0.8rem; color:var(--navy-2);">Keterbatasan jumlah & kompetensi—banyak daerah hanya punya 1–2 "penjaga tunggal" keamanan siber</p>
+        </div>
+        <div class="card" style="border-color:#FDE68A; background:var(--amber-light);">
+          <div style="font-size:1.4rem; font-weight:700; color:var(--amber); margin-bottom:0.3rem;">Infrastruktur</div>
+          <p style="font-size:0.8rem; color:#78350F;">Minimnya perangkat monitoring & logging memadai; deteksi dini tidak bisa berjalan efektif</p>
+        </div>
+        <div class="card" style="border-color:#FCC9B5; background:var(--coral-light);">
+          <div style="font-size:1.4rem; font-weight:700; color:var(--coral); margin-bottom:0.3rem;">Tata Kelola</div>
+          <p style="font-size:0.8rem; color:#7C2D12;">Sistem masih reaktif; kebijakan respons insiden belum terstandar di mayoritas pemda</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="height:1px; background:var(--border); margin-bottom:2rem;"></div>
+
+    <!-- 04 -->
+    <div>
+      <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem;">
+        <div class="outline-num num-coral" style="width:28px;height:28px;font-size:0.75rem;">04</div>
+        <h3 style="font-family:var(--serif); font-size:1rem; font-weight:400;">Alasan & Kesiapan Studi Magister</h3>
+      </div>
+      <p style="font-size:0.875rem; color:var(--text-mid); margin-bottom:1rem;">Studi bukan sekadar peningkatan jenjang, melainkan langkah sistematis untuk mengisi gap keilmuan yang telah teridentifikasi di lapangan. Disiplin berasrama dan pengalaman mengolah data kebijakan membangun kesiapan akademik yang matang.</p>
+      <div class="card-grid card-grid-2" style="gap:0.75rem;">
+        <div style="display:flex; gap:0.75rem; padding:1rem; background:var(--slate-light); border-radius:12px; border:1px solid var(--border);">
+          <div style="font-size:1.5rem; color:var(--blue-bright); flex-shrink:0;">✦</div>
+          <div>
+            <div style="font-size:0.85rem; font-weight:600; color:var(--text-dark); margin-bottom:0.2rem;">Kesiapan Akademik</div>
+            <p style="font-size:0.78rem; color:var(--text-mid);">Track record riset (IEEE, Hak Cipta), manajemen waktu terstruktur sejak asrama, dan pengolahan data berbasis kebijakan di BSSN</p>
+          </div>
+        </div>
+        <div style="display:flex; gap:0.75rem; padding:1rem; background:var(--slate-light); border-radius:12px; border:1px solid var(--border);">
+          <div style="font-size:1.5rem; color:var(--teal); flex-shrink:0;">✦</div>
+          <div>
+            <div style="font-size:0.85rem; font-weight:600; color:var(--text-dark); margin-bottom:0.2rem;">Relevansi Program MTI UGM</div>
+            <p style="font-size:0.78rem; color:var(--text-mid);">Konsentrasi Network & Cybersecurity + UGM AI Center of Excellence → ekosistem riset AI yang kolaboratif dan tersambung ke BSSN</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div><!-- /section-ps -->
+
+  <!-- ══════════════════════════════════════════
+       ESSAY 2 – ESSAY KOMITMEN
+  ══════════════════════════════════════════ -->
+  <div id="section-komitmen" class="section-block">
+  <div class="section-label">
+    <span class="pill pill-teal">Essay 02</span>
+    <h2>Essay Komitmen</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <!-- OUTLINE KOMITMEN -->
+  <div style="margin-bottom:1.25rem;">
+    <div style="font-size:0.72rem; font-weight:600; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:0.75rem;">Outline Essay</div>
+    <div class="card-grid card-grid-2">
+
+      <div class="outline-card">
+        <div class="outline-card-header">
+          <div class="outline-num num-blue">01</div>
+          <div>
+            <h3>Konteks Masalah Nasional</h3>
+            <p>Transformasi digital vs kesiapan keamanan siber pemda</p>
+          </div>
+        </div>
+        <div class="outline-body">
+          <ul>
+            <li>SPBE & Asta Cita: digitalisasi layanan publik masif</li>
+            <li>UU PDP + RUU KKS sebagai kerangka regulasi baru</li>
+            <li>5,4 miliar trafik anomali siber (2025); 52–79% menyasar administrasi pemerintah</li>
+            <li>Indeks TMPI mayoritas pemda masih di level rendah–menengah</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="outline-card">
+        <div class="outline-card-header">
+          <div class="outline-num num-teal">02</div>
+          <div>
+            <h3>Solusi: Integrasi AI & ML</h3>
+            <p>Dari keamanan reaktif ke prediktif</p>
+          </div>
+        </div>
+        <div class="outline-body">
+          <ul>
+            <li>Pendekatan konvensional tidak mampu deteksi ancaman baru</li>
+            <li>ML untuk deteksi anomali real-time & klasifikasi ancaman otomatis</li>
+            <li>Otomatisasi respons awal mengatasi keterbatasan SDM</li>
+            <li>Paradigma: reaktif → proaktif → prediktif</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="outline-card">
+        <div class="outline-card-header">
+          <div class="outline-num num-amber">03</div>
+          <div>
+            <h3>Rencana Studi di UGM</h3>
+            <p>Kurikulum, riset, dan komunitas</p>
+          </div>
+        </div>
+        <div class="outline-body">
+          <ul>
+            <li>Tahun 1: kurikulum inti + tinjauan pustaka ML/AI keamanan siber</li>
+            <li>Tahun 2: tesis integrasi ML/AI untuk sistem deteksi & respons siber</li>
+            <li>Target publikasi jurnal Scopus / prosiding IEEE</li>
+            <li>Jejaring komunitas: Jogja Cyber Security (JCS)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="outline-card">
+        <div class="outline-card-header">
+          <div class="outline-num num-green">04</div>
+          <div>
+            <h3>Rencana Kontribusi Pasca-Studi</h3>
+            <p>Jangka pendek, menengah, dan panjang</p>
+          </div>
+        </div>
+        <div class="outline-body">
+          <ul>
+            <li>Pendek: diseminasi BSSN, pelatihan 552 pemda, webinar nasional</li>
+            <li>Menengah: dosen luar biasa PoltekSSN, pilot di 3 pemda</li>
+            <li>Panjang: ekosistem riset siber sektor publik & standarisasi TTIS nasional</li>
+            <li>Visi: Indonesia Emas 2045 – transformasi digital yang berdaulat</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- DETAIL KOMITMEN -->
+  <div class="card" style="margin-bottom:1.5rem;">
+    <div style="font-size:0.72rem; font-weight:600; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:1.25rem;">Penjabaran Isi Per Outline</div>
+
+    <!-- 01 -->
+    <div style="margin-bottom:2rem;">
+      <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem;">
+        <div class="outline-num num-blue" style="width:28px;height:28px;font-size:0.75rem;">01</div>
+        <h3 style="font-family:var(--serif); font-size:1rem; font-weight:400;">Data & Urgensi Masalah</h3>
+      </div>
+      <div class="stat-grid" style="margin-bottom:1rem;">
+        <div class="stat-card"><div class="stat-val" style="color:var(--coral);">5.4M</div><div class="stat-lbl">Miliar trafik anomali (2025)</div></div>
+        <div class="stat-card"><div class="stat-val" style="color:var(--coral);">52%</div><div class="stat-lbl">CTI dari sektor pemda</div></div>
+        <div class="stat-card"><div class="stat-val" style="color:var(--coral);">79%</div><div class="stat-lbl">Indikasi kebocoran data pemda</div></div>
+        <div class="stat-card"><div class="stat-val" style="color:var(--amber);">552</div><div class="stat-lbl">Pemda yang perlu penguatan</div></div>
+      </div>
+      <div class="quote-block">
+        <p>"Mas, di sini urusan keamanan siber itu cuma dipegang satu orang. Kalau ada insiden, pasti hanya orang itu yang menangani." — Pegawai pemerintah daerah, 2023</p>
+      </div>
+    </div>
+
+    <div style="height:1px; background:var(--border); margin-bottom:2rem;"></div>
+
+    <!-- 02 -->
+    <div style="margin-bottom:2rem;">
+      <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem;">
+        <div class="outline-num num-teal" style="width:28px;height:28px;font-size:0.75rem;">02</div>
+        <h3 style="font-family:var(--serif); font-size:1rem; font-weight:400;">Solusi: Pergeseran Paradigma Keamanan</h3>
+      </div>
+      <div style="display:flex; align-items:center; justify-content:center; gap:0.5rem; flex-wrap:wrap; margin-bottom:1rem;">
+        <div style="padding:0.6rem 1.2rem; background:var(--coral-light); border:1px solid #FCC9B5; border-radius:10px; font-size:0.82rem; font-weight:600; color:var(--coral); text-align:center;">Reaktif<br><span style="font-size:0.7rem; font-weight:400;">Rule-based, statis</span></div>
+        <div style="font-size:1.2rem; color:var(--slate);">→</div>
+        <div style="padding:0.6rem 1.2rem; background:var(--amber-light); border:1px solid #FDE68A; border-radius:10px; font-size:0.82rem; font-weight:600; color:var(--amber); text-align:center;">Proaktif<br><span style="font-size:0.7rem; font-weight:400;">Anomali detection</span></div>
+        <div style="font-size:1.2rem; color:var(--slate);">→</div>
+        <div style="padding:0.6rem 1.2rem; background:var(--teal-light); border:1px solid #99F6E4; border-radius:10px; font-size:0.82rem; font-weight:600; color:var(--teal); text-align:center;">Prediktif<br><span style="font-size:0.7rem; font-weight:400;">ML/AI real-time</span></div>
+      </div>
+      <p style="font-size:0.875rem; color:var(--text-mid);">ML memungkinkan sistem mempelajari pola normal trafik jaringan, mengidentifikasi anomali, dan memberikan respons awal secara otomatis. Pendekatan ini menjawab dua masalah sekaligus: keterbatasan SDM dan lambatnya deteksi ancaman baru yang belum dikenal pola serangannya.</p>
+    </div>
+
+    <div style="height:1px; background:var(--border); margin-bottom:2rem;"></div>
+
+    <!-- 03 -->
+    <div style="margin-bottom:2rem;">
+      <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem;">
+        <div class="outline-num num-amber" style="width:28px;height:28px;font-size:0.75rem;">03</div>
+        <h3 style="font-family:var(--serif); font-size:1rem; font-weight:400;">Rencana Studi MTI UGM</h3>
+      </div>
+      <div class="card-grid card-grid-2" style="gap:0.75rem;">
+        <div class="card" style="background:var(--slate-light);">
+          <div style="font-size:0.72rem; font-weight:700; color:var(--blue-bright); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:0.6rem;">Tahun 1</div>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:0.4rem;">
+            <li style="font-size:0.82rem; color:var(--text-mid); padding-left:1rem; position:relative;"><span style="position:absolute;left:0;">·</span>Penguasaan kurikulum inti (Keamanan TI, Jaringan Lanjut)</li>
+            <li style="font-size:0.82rem; color:var(--text-mid); padding-left:1rem; position:relative;"><span style="position:absolute;left:0;">·</span>Tinjauan pustaka mendalam: ML/AI dalam keamanan siber</li>
+            <li style="font-size:0.82rem; color:var(--text-mid); padding-left:1rem; position:relative;"><span style="position:absolute;left:0;">·</span>Seminar & konferensi nasional/internasional</li>
+            <li style="font-size:0.82rem; color:var(--text-mid); padding-left:1rem; position:relative;"><span style="position:absolute;left:0;">·</span>Bergabung komunitas JCS Yogyakarta</li>
+          </ul>
+        </div>
+        <div class="card" style="background:var(--slate-light);">
+          <div style="font-size:0.72rem; font-weight:700; color:var(--teal); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:0.6rem;">Tahun 2</div>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:0.4rem;">
+            <li style="font-size:0.82rem; color:var(--text-mid); padding-left:1rem; position:relative;"><span style="position:absolute;left:0;">·</span>Tesis: Integrasi ML/AI untuk Deteksi & Respons Serangan Siber</li>
+            <li style="font-size:0.82rem; color:var(--text-mid); padding-left:1rem; position:relative;"><span style="position:absolute;left:0;">·</span>Prototipe sistem yang dapat diimplementasikan di pemda</li>
+            <li style="font-size:0.82rem; color:var(--text-mid); padding-left:1rem; position:relative;"><span style="position:absolute;left:0;">·</span>Target publikasi Scopus / IEEE</li>
+            <li style="font-size:0.82rem; color:var(--text-mid); padding-left:1rem; position:relative;"><span style="position:absolute;left:0;">·</span>Kolaborasi UGM AI Center of Excellence</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div style="height:1px; background:var(--border); margin-bottom:2rem;"></div>
+
+    <!-- 04 -->
+    <div>
+      <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:1rem;">
+        <div class="outline-num num-green" style="width:28px;height:28px;font-size:0.75rem;">04</div>
+        <h3 style="font-family:var(--serif); font-size:1rem; font-weight:400;">Roadmap Kontribusi Pasca-Studi</h3>
+      </div>
+      <div class="card roadmap" style="padding:0; overflow:hidden;">
+        <div class="roadmap-item">
+          <div class="roadmap-phase" style="color:var(--blue-bright);">Jangka Pendek</div>
+          <h4>Kembali & Berbagi</h4>
+          <ul>
+            <li>Diseminasi internal BSSN (knowledge sharing, rekomendasi kebijakan)</li>
+            <li>Pelatih di Pusat Pengembangan SDM BSSN</li>
+            <li>Webinar nasional 552 pemda</li>
+            <li>Kolaborasi komunitas keamanan siber</li>
+          </ul>
+        </div>
+        <div class="roadmap-item">
+          <div class="roadmap-phase" style="color:var(--teal);">Jangka Menengah</div>
+          <h4>Implementasi & Pembinaan</h4>
+          <ul>
+            <li>Dosen luar biasa PoltekSSN</li>
+            <li>Pilot sistem deteksi di 3 pemda</li>
+            <li>Penguatan tata kelola & SDM pemda</li>
+            <li>Standarisasi kontrol keamanan minimal</li>
+          </ul>
+        </div>
+        <div class="roadmap-item" style="border-right:none;">
+          <div class="roadmap-phase" style="color:var(--green);">Jangka Panjang</div>
+          <h4>Ekosistem Nasional</h4>
+          <ul>
+            <li>PoltekSSN sebagai pusat riset siber sektor publik</li>
+            <li>Lab riset terapan & kolaborasi dosen–taruna–BSSN</li>
+            <li>TTIS daerah terintegrasi secara nasional</li>
+            <li>Indonesia Emas 2045 – kedaulatan siber</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  </div><!-- /section-komitmen -->
+
+  <!-- ══════════════════════════════════════════
+       KETERKAITAN KEDUA ESSAY
+  ══════════════════════════════════════════ -->
+  <div id="section-keterkaitan" class="section-block">
+  <div class="section-label">
+    <span class="pill pill-navy">Sintesis</span>
+    <h2>Keterkaitan Kedua Essay</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="connection-section">
+    <h3>Arsitektur Narasi yang Saling Menopang</h3>
+    <p>Personal Statement membangun kredibilitas "siapa saya", Essay Komitmen menjabarkan "untuk apa saya". Keduanya membentuk satu argumen yang koheren dan saling memperkuat.</p>
+
+    <div class="conn-grid">
+      <div class="conn-col ps">
+        <h4>Personal Statement</h4>
+        <div class="conn-item">Keluarga guru → nilai tanggung jawab & pendidikan</div>
+        <div class="conn-item">Asrama PoltekSSN → disiplin & adaptasi</div>
+        <div class="conn-item">Tim ITSA → kemampuan offensive security</div>
+        <div class="conn-item">Tim TTIS Pemda → menyaksikan langsung kesenjangan siber daerah</div>
+        <div class="conn-item">Evaluasi TTIS 2025 → analisis data kebijakan skala nasional</div>
+        <div class="conn-item">Gap keilmuan ML/AI → motivasi melanjutkan studi</div>
+      </div>
+
+      <div class="conn-center">
+        <div class="conn-node">Masalah:<br>Siber Pemda</div>
+        <div class="conn-line"></div>
+        <div class="conn-node">Solusi:<br>ML/AI Keamanan</div>
+        <div class="conn-line"></div>
+        <div class="conn-node">Wadah:<br>MTI UGM LPDP</div>
+        <div class="conn-line"></div>
+        <div class="conn-node">Dampak:<br>Indonesia 2045</div>
+      </div>
+
+      <div class="conn-col es">
+        <h4>Essay Komitmen</h4>
+        <div class="conn-item">Data TMPI rendah → urgensi solusi sistematis</div>
+        <div class="conn-item">5,4 miliar anomali → skala masalah nasional</div>
+        <div class="conn-item">ML/AI = solusi keterbatasan SDM & reaktivitas sistem</div>
+        <div class="conn-item">Tesis prototipe → langsung dapat diimplementasikan pemda</div>
+        <div class="conn-item">Pilot 3 pemda → bukti nyata kontribusi riset</div>
+        <div class="conn-item">Ekosistem PoltekSSN-BSSN → keberlanjutan jangka panjang</div>
+      </div>
+    </div>
+
+    <div class="theme-grid">
+      <div class="theme-card">
+        <div class="icon">⟳</div>
+        <h5>Lingkaran Pengalaman → Solusi</h5>
+        <p>PS membuktikan bahwa Fauzan melihat masalah dari dalam (TTIS, ITSA). Essay Komitmen menunjukkan ia sudah memikirkan solusi konkret berbasis riset—bukan sekadar keinginan abstrak.</p>
+      </div>
+      <div class="theme-card">
+        <div class="icon">⬡</div>
+        <h5>Kredibilitas Teknis + Visi Strategis</h5>
+        <p>PS membangun bukti kemampuan teknis (IEEE, sertifikasi, pengamanan Pemilu). Essay Komitmen menempatkan kemampuan itu dalam narasi kebijakan dan dampak nasional.</p>
+      </div>
+      <div class="theme-card">
+        <div class="icon">↑</div>
+        <h5>Kontinuitas Pengabdian</h5>
+        <p>Keduanya bermuara pada BSSN dan pemda: PS menceritakan perjalanan ke sana, Essay Komitmen mendesain bagaimana ilmu yang diperoleh dikembalikan ke institusi yang sama.</p>
+      </div>
+      <div class="theme-card">
+        <div class="icon">◈</div>
+        <h5>Satu Karakter, Dua Sudut Pandang</h5>
+        <p>PS menampilkan Fauzan sebagai individu yang berkembang—dari ragu ke percaya diri. Essay Komitmen menampilkan Fauzan sebagai pemikir kebijakan yang visioner dan terencana.</p>
+      </div>
+    </div>
+  </div>
+
+  </div><!-- /section-keterkaitan -->
+
+  <!-- ══════════════════════════════════════════
+       FULL TEXT ESSAY
+  ══════════════════════════════════════════ -->
+  <div id="section-fulltext" class="section-block hidden">
+    <div class="section-label">
+      <span class="pill pill-amber">Full Text</span>
+      <h2>Teks Lengkap Kedua Essay</h2>
+      <div class="section-line"></div>
+      <button class="nav-btn nav-btn-note" id="btn-notes" onclick="toggleNotes()" style="flex-shrink:0; padding:0.4rem 0.9rem; font-size:0.76rem;">✏ Buat Catatan</button>
+    </div>
+
+    <!-- Personal Statement Full -->
+    <div class="fulltext-wrap" style="margin-bottom:1.5rem;">
+      <div class="fulltext-header">
+        <span class="pill pill-blue">Essay 01</span>
+        <span style="font-family:var(--serif); font-size:1.05rem; font-weight:400;">Personal Statement</span>
+      </div>
+      <div class="fulltext-body" id="ft-ps">
+
+        <div class="para-row" id="pr-ps-1">
+          <p>Tanpa latar belakang militer, saya memilih menempuh pendidikan di Sekolah Kedinasan <mark class="hl-yellow">Politeknik Siber dan Sandi Negara yang menerapkan pembinaan semimiliter berasrama</mark>. Lingkungan dengan disiplin ketat dan tuntutan konsisten tersebut membentuk ketekunan saya serta kemampuan beradaptasi dengan lingkungan baru. Saya Fauzan Budi Setiawan, dibesarkan oleh <mark class="hl-blue">orang tua yang berprofesi sebagai guru dalam keluarga yang menempatkan pendidikan sebagai fondasi pembentukan karakter dan tanggung jawab</mark>. Nilai tersebut menjadi landasan saya dalam menjalani setiap proses pembelajaran dan pengabdian.</p>
+          <div class="para-note-col"><div class="para-note-box"><textarea placeholder="Catatan untuk paragraf ini…" data-id="ps-1"></textarea><button class="para-note-save" onclick="saveNote('ps-1',this)">Simpan</button></div></div>
+        </div>
+
+        <div class="para-row" id="pr-ps-2">
+          <p>Selama masa kuliah, ketertarikan saya pada keamanan siber berkembang pesat sejak semester empat, ketika saya pertama kali mendapatkan tugas pada mata kuliah keamanan jaringan untuk <mark class="hl-yellow">mengimplementasikan keamanan pada perangkat Internet of Things (IoT)</mark>. Kami dikenalkan dengan beragam tools seperti firewall, intrusion detection system (IDS), dan enkripsi protokol. Pengalaman ini mendorong saya memperkuat pendalaman konsep <mark class="hl-green">CIA Triad—Confidentiality, Integrity, dan Availability—sebagai kerangka utama dalam membangun keamanan yang terstruktur dan berkelanjutan</mark>. Secara paralel, saya mempelajari pembelajaran mesin secara intensif, dengan fokus pada penerapan pengenalan wajah.</p>
+          <div class="para-note-col"><div class="para-note-box"><textarea placeholder="Catatan untuk paragraf ini…" data-id="ps-2"></textarea><button class="para-note-save" onclick="saveNote('ps-2',this)">Simpan</button></div></div>
+        </div>
+
+        <div class="para-row" id="pr-ps-3">
+          <p>Akhir perjalanan akademik saya di PoltekSSN diwujudkan melalui proyek penelitian yang mengintegrasikan <mark class="hl-blue">algoritma Elliptic Curve Cryptography (ECC) untuk meningkatkan keamanan perangkat IoT dari ancaman seperti man-in-the-middle attack (MITM) dan distributed denial-of-service (DDoS)</mark>. Penelitian tersebut saya presentasikan pada konferensi ilmiah <mark class="hl-green">COSITE yang dipublikasikan dalam prosiding IEEE</mark>, serta telah memperoleh pencatatan <mark class="hl-green">Hak Cipta dari Direktorat Jenderal Kekayaan Intelektual (DJKI)</mark>. Pengalaman ini tidak hanya memperkuat kompetensi teknis saya, tetapi juga meningkatkan pemahaman saya tentang peran inovasi keamanan siber dalam kehidupan masyarakat di era digital.</p>
+          <div class="para-note-col"><div class="para-note-box"><textarea placeholder="Catatan untuk paragraf ini…" data-id="ps-3"></textarea><button class="para-note-save" onclick="saveNote('ps-3',this)">Simpan</button></div></div>
+        </div>
+
+        <div class="para-row" id="pr-ps-4">
+          <p>Selama melaksanakan pendidikan empat tahun di PoltekSSN, saya berupaya menjaga performa akademik secara konsisten hingga <mark class="hl-yellow">termasuk dalam tiga mahasiswa dengan IPK terbaik selama delapan semester dan mendapatkan Penghargaan Sanapati Cendekia</mark>. Perjalanan akademik ditutup dengan <mark class="hl-yellow">IPK 3,73 dan predikat cum laude</mark> sebagai cerminan komitmen dan ketekunan dalam belajar.</p>
+          <div class="para-note-col"><div class="para-note-box"><textarea placeholder="Catatan untuk paragraf ini…" data-id="ps-4"></textarea><button class="para-note-save" onclick="saveNote('ps-4',this)">Simpan</button></div></div>
+        </div>
+
+        <div class="para-row" id="pr-ps-5">
+          <p>Penempatan pertama saya di lingkungan BSSN adalah sebagai tim <mark class="hl-blue">Information Technology Security Assessment (ITSA)</mark> Direktorat Operasi Keamanan Siber dan Sandi. Peran ini menjadi tantangan besar karena saya harus <mark class="hl-yellow">beralih dari pola pikir defensif menjadi pola pikir ofensif</mark> dengan menyimulasikan serangan untuk menemukan celah keamanan. Proses belajar yang intens tersebut melatih saya untuk <mark class="hl-green">tidak takut menghadapi ketertinggalan, melainkan menjadikannya sebagai pemicu untuk berkembang</mark>. Seiring waktu, saya dipercaya terlibat dalam pengamanan <mark class="hl-yellow">HUT RI ke-77 (2022) dan sistem aplikasi Pemilu Presiden 2024</mark>. Pengalaman ini menegaskan pentingnya ketahanan belajar dan kesiapan mental dalam menjalankan tanggung jawab profesional.</p>
+          <div class="para-note-col"><div class="para-note-box"><textarea placeholder="Catatan untuk paragraf ini…" data-id="ps-5"></textarea><button class="para-note-save" onclick="saveNote('ps-5',this)">Simpan</button></div></div>
+        </div>
+
+        <div class="para-row" id="pr-ps-6">
+          <p>Pada akhir 2023, saya kembali mengabdi di PoltekSSN sebagai bagian dari <mark class="hl-blue">Unit Pengasuhan Mental dan Kedisiplinan (PMK)</mark>. Tantangan terbesar saya adalah <mark class="hl-yellow">keterbatasan rasa percaya diri saat berbicara di depan umum serta keraguan dalam mengajukan pertanyaan</mark>. Untuk mengatasinya, saya melatih diri untuk <mark class="hl-green">mencatat pertanyaan sejak awal diskusi dan berkomitmen menyampaikan minimal satu pertanyaan dalam setiap forum</mark>. Upaya ini perlahan membantu saya membangun keberanian serta meningkatkan kualitas partisipasi dalam kerja tim.</p>
+          <div class="para-note-col"><div class="para-note-box"><textarea placeholder="Catatan untuk paragraf ini…" data-id="ps-6"></textarea><button class="para-note-save" onclick="saveNote('ps-6',this)">Simpan</button></div></div>
+        </div>
+
+        <div class="para-row" id="pr-ps-7">
+          <p>Saya juga terlibat sebagai pembina dalam <mark class="hl-blue">Latsitardanus XLIV tahun 2024 di Kalimantan Timur</mark>, kegiatan integrasi yang melibatkan tujuh institusi pendidikan kedinasan dari unsur militer dan sipil. Dari pengalaman tersebut, perspektif saya akan pengembangan sumber daya manusia berkembang: <mark class="hl-green">keunggulan teknis perlu dilengkapi dengan karakter baik dan jiwa kepemimpinan untuk menjadi sumber daya manusia yang utuh</mark>.</p>
+          <div class="para-note-col"><div class="para-note-box"><textarea placeholder="Catatan untuk paragraf ini…" data-id="ps-7"></textarea><button class="para-note-save" onclick="saveNote('ps-7',this)">Simpan</button></div></div>
+        </div>
+
+        <div class="para-row" id="pr-ps-8">
+          <p>Saat ini, saya bertugas sebagai <mark class="hl-blue">Manggala Informatika Ahli Pertama pada Direktorat Keamanan Siber dan Sandi Pemerintah Daerah BSSN</mark>, dengan fokus pada penguatan kesiapsiagaan siber pemerintah daerah. Saya tergabung dalam tim <mark class="hl-yellow">pembentukan dan penguatan Tim Tanggap Insiden Siber (TTIS) di seluruh Indonesia</mark>. Lebih dari sekadar aspek teknis, saya melihat langsung <mark class="hl-yellow">kesenjangan kapasitas antardaerah, baik dari sisi sumber daya manusia, infrastruktur, maupun tata kelola</mark>.</p>
+          <div class="para-note-col"><div class="para-note-box"><textarea placeholder="Catatan untuk paragraf ini…" data-id="ps-8"></textarea><button class="para-note-save" onclick="saveNote('ps-8',this)">Simpan</button></div></div>
+        </div>
+
+        <div class="para-row" id="pr-ps-9">
+          <p>Di luar tanggung jawab utama, saya memiliki dorongan untuk terus meningkatkan kapasitas profesional. Saya menyelesaikan <mark class="hl-green">Google Cybersecurity Professional Certificate</mark> serta meraih sertifikasi <mark class="hl-green">Ethical Hacking Essentials (EC-Council), Alibaba Cloud Certified Professional (ACP) Big Data, dan Certified AppSec Practitioner (CAP)</mark>.</p>
+          <div class="para-note-col"><div class="para-note-box"><textarea placeholder="Catatan untuk paragraf ini…" data-id="ps-9"></textarea><button class="para-note-save" onclick="saveNote('ps-9',this)">Simpan</button></div></div>
+        </div>
+
+        <div class="para-row" id="pr-ps-10">
+          <p>Seiring percepatan transformasi digital nasional, kompleksitas ancaman siber meningkat, sementara banyak pemerintah daerah masih mengandalkan pendekatan keamanan berbasis aturan yang reaktif. Situasi ini menyadarkan saya bahwa <mark class="hl-yellow">pemahaman saya mengenai perancangan arsitektur keamanan aplikasi berbasis ML dan AI yang adaptif masih perlu diperdalam secara sistematis melalui studi magister</mark>.</p>
+          <div class="para-note-col"><div class="para-note-box"><textarea placeholder="Catatan untuk paragraf ini…" data-id="ps-10"></textarea><button class="para-note-save" onclick="saveNote('ps-10',this)">Simpan</button></div></div>
+        </div>
+
+        <div class="para-row" id="pr-ps-11">
+          <p>Berangkat dari pengalaman tersebut, saya memilih <mark class="hl-blue">Program Magister Teknologi Informasi di Universitas Gadjah Mada dengan konsentrasi Network and Cybersecurity</mark>. Program ini memberikan fondasi keilmuan yang kuat dalam perancangan sistem keamanan serta ruang eksplorasi riset pada teknologi mutakhir. Melalui studi ini, saya ingin mendalami <mark class="hl-green">pengembangan sistem keamanan aplikasi berbasis ML dan AI yang mampu melakukan deteksi anomali secara waktu nyata dan respons otomatis</mark> yang relevan untuk diterapkan dalam ekosistem pemerintahan.</p>
+          <div class="para-note-col"><div class="para-note-box"><textarea placeholder="Catatan untuk paragraf ini…" data-id="ps-11"></textarea><button class="para-note-save" onclick="saveNote('ps-11',this)">Simpan</button></div></div>
+        </div>
+
+        <div class="para-row" id="pr-ps-12">
+          <p>Bagi saya, <mark class="hl-yellow">pendidikan magister bukan sekadar jenjang akademik, melainkan kelanjutan dari nilai disiplin dan tanggung jawab</mark> yang telah saya bangun sejak pendidikan berasrama dan pengabdian di BSSN. Dukungan LPDP akan membuka ruang bagi saya untuk mengakses pendidikan berkualitas, memperluas jejaring akademik dan profesional. Kesempatan ini juga menjadi <mark class="hl-green">wujud tanggung jawab pribadi untuk memastikan setiap kesempatan belajar dikembalikan dalam bentuk pengabdian yang berdampak dan berkelanjutan</mark>.</p>
+          <div class="para-note-col"><div class="para-note-box"><textarea placeholder="Catatan untuk paragraf ini…" data-id="ps-12"></textarea><button class="para-note-save" onclick="saveNote('ps-12',this)">Simpan</button></div></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Essay Komitmen Full -->
+    <div class="fulltext-wrap">
+      <div class="fulltext-header">
+        <span class="pill pill-teal">Essay 02</span>
+        <span style="font-family:var(--serif); font-size:1.05rem; font-weight:400;">Essay Komitmen – Membangun Ketahanan Siber Pemerintah melalui Integrasi Artificial Intelligence</span>
+      </div>
+      <div class="fulltext-body" id="ft-ek">
+
+        <div class="para-row" id="pr-ek-1">
+          <p><mark class="hl-yellow">"Mas, di sini urusan keamanan siber itu cuma dipegang satu orang. Orangnya yang paham ya itu-itu saja. Kalau ada insiden, pasti hanya orang itu yang menangani."</mark> Kalimat tersebut saya dengar secara langsung dari seorang pegawai pemerintah daerah saat saya terlibat dalam tugas ITSA pada tahun 2023. Kalimat itu merepresentasikan realitas keamanan siber di banyak daerah di Indonesia—<mark class="hl-yellow">ketergantungan pada satu atau dua individu yang diposisikan sebagai 'penjaga tunggal'</mark>. Seiring berkembangnya ancaman siber yang semakin kompleks, kondisi ini <mark class="hl-yellow">berisiko tinggi terhadap keberlangsungan layanan publik dan ketahanan siber di Indonesia</mark>.</p>
+          <div class="para-note-col"><div class="para-note-box"><textarea placeholder="Catatan untuk paragraf ini…" data-id="ek-1"></textarea><button class="para-note-save" onclick="saveNote('ek-1',this)">Simpan</button></div></div>
+        </div>
+
+        <div class="para-row" id="pr-ek-2">
+          <p>Transformasi digital nasional melalui <mark class="hl-blue">Sistem Pemerintahan Berbasis Elektronik (SPBE)</mark> telah mendorong peningkatan signifikan dalam pemanfaatan teknologi informasi di sektor publik. Indonesia sedang mengusung program <mark class="hl-blue">Asta Cita</mark> yang menempatkan penguatan SDM, sains, dan teknologi sebagai fondasi kemajuan bangsa. Implementasi <mark class="hl-blue">UU PDP</mark> menuntut pemerintah melindungi data masyarakat secara komprehensif. Sementara itu, <mark class="hl-blue">RUU KKS menegaskan bahwa keamanan siber merupakan bagian dari ketahanan nasional</mark>.</p>
+          <div class="para-note-col"><div class="para-note-box"><textarea placeholder="Catatan untuk paragraf ini…" data-id="ek-2"></textarea><button class="para-note-save" onclick="saveNote('ek-2',this)">Simpan</button></div></div>
+        </div>
+
+        <div class="para-row" id="pr-ek-3">
+          <p>Namun, percepatan digitalisasi tersebut belum sepenuhnya diimbangi dengan penguatan tata kelola keamanan siber. Berdasarkan Laporan Lanskap Keamanan Siber Indonesia 2024, tercatat <mark class="hl-yellow">1,8 miliar trafik anomali (2024) yang meningkat drastis menjadi 5,4 miliar pada 2025</mark>. Sektor administrasi pemerintahan menyumbang <mark class="hl-yellow">52% temuan CTI, 58% darknet exposure, serta 79% indikasi kebocoran data</mark>. Indeks TMPI menunjukkan <mark class="hl-yellow">kematangan penanganan insiden siber di pemerintah daerah masih didominasi level rendah hingga menengah</mark>.</p>
+          <div class="para-note-col"><div class="para-note-box"><textarea placeholder="Catatan untuk paragraf ini…" data-id="ek-3"></textarea><button class="para-note-save" onclick="saveNote('ek-3',this)">Simpan</button></div></div>
+        </div>
+
+        <div class="para-row" id="pr-ek-4">
+          <p>Kondisi ini mengindikasikan bahwa sebagian besar pemerintah daerah belum memiliki kapabilitas respons insiden yang optimal. Keterbatasan <mark class="hl-yellow">perangkat monitoring dan logging</mark> memadai menyebabkan deteksi dini, analisis insiden, serta forensik digital belum dapat dilakukan secara efektif. <mark class="hl-yellow">Sistem pengamanan yang ada masih bersifat reaktif dan belum berbasis pada mekanisme pencegahan serta pengendalian risiko yang terstruktur</mark>.</p>
+          <div class="para-note-col"><div class="para-note-box"><textarea placeholder="Catatan untuk paragraf ini…" data-id="ek-4"></textarea><button class="para-note-save" onclick="saveNote('ek-4',this)">Simpan</button></div></div>
+        </div>
+
+        <div class="para-row" id="pr-ek-5">
+          <p>Kesenjangan tersebut mendorong saya mencari solusi yang lebih inovatif. <mark class="hl-green">Integrasi kecerdasan artifisial (AI), terutama pembelajaran mesin (ML), dalam sistem keamanan aplikasi dan jaringan merupakan salah satu solusi strategis</mark>. Dengan ML, sistem dapat <mark class="hl-green">mempelajari pola normal aktivitas jaringan, mengidentifikasi anomali, mengklasifikasikan ancaman secara otomatis, serta memberikan respons awal secara waktu nyata</mark> sebelum terjadi dampak yang masif. Pendekatan ini dapat <mark class="hl-green">membantu mengatasi keterbatasan SDM karena otomatisasi memungkinkan sistem tetap berjalan efektif</mark>.</p>
+          <div class="para-note-col"><div class="para-note-box"><textarea placeholder="Catatan untuk paragraf ini…" data-id="ek-5"></textarea><button class="para-note-save" onclick="saveNote('ek-5',this)">Simpan</button></div></div>
+        </div>
+
+        <div class="para-row" id="pr-ek-6">
+          <p>Maka dari itu, saya memilih melanjutkan studi pada <mark class="hl-blue">Program Magister Teknologi Informasi di Universitas Gadjah Mada dengan konsentrasi Network and Cybersecurity</mark>. Konsentrasi ini menawarkan landasan konseptual dan teknis komprehensif dalam perancangan arsitektur keamanan modern. Selain kurikulum yang kuat, <mark class="hl-blue">UGM memiliki UGM AI Center of Excellence yang telah berkolaborasi dengan NVIDIA, Indosat, Telkom Indonesia, Microsoft, ParagonCorp, Botika, serta universitas internasional seperti Hanyang University</mark>.</p>
+          <div class="para-note-col"><div class="para-note-box"><textarea placeholder="Catatan untuk paragraf ini…" data-id="ek-6"></textarea><button class="para-note-save" onclick="saveNote('ek-6',this)">Simpan</button></div></div>
+        </div>
+
+        <div class="para-row" id="pr-ek-7">
+          <p>Pada tahun pertama studi, saya akan memfokuskan diri pada penguasaan kurikulum inti dan tinjauan pustaka mendalam mengenai ML/AI dalam keamanan siber. Pada tahun kedua, saya akan mengerjakan tesis: <mark class="hl-yellow">"Integrasi Machine Learning dan Artificial Intelligence untuk Peningkatan Sistem Deteksi dan Respons Serangan Siber"</mark>. Penelitian ini dirancang menghasilkan model dan prototipe sistem yang dapat diimplementasikan secara nyata di lingkungan pemerintah daerah. Saya menargetkan <mark class="hl-green">publikasi pada jurnal atau prosiding bereputasi internasional yang terindeks Scopus atau IEEE</mark>.</p>
+          <div class="para-note-col"><div class="para-note-box"><textarea placeholder="Catatan untuk paragraf ini…" data-id="ek-7"></textarea><button class="para-note-save" onclick="saveNote('ek-7',this)">Simpan</button></div></div>
+        </div>
+
+        <div class="para-row" id="pr-ek-8">
+          <p>Pasca studi, saya akan kembali ke BSSN. Dalam jangka pendek, saya akan melakukan <mark class="hl-blue">diseminasi hasil penelitian melalui forum internal knowledge sharing, diskusi teknis, dan rekomendasi kebijakan berbasis riset</mark>. Saya juga akan menjadi pengajar di Pusat Pengembangan SDM BSSN dan <mark class="hl-yellow">menginisiasi webinar nasional yang menjangkau 552 pemerintah daerah</mark>.</p>
+          <div class="para-note-col"><div class="para-note-box"><textarea placeholder="Catatan untuk paragraf ini…" data-id="ek-8"></textarea><button class="para-note-save" onclick="saveNote('ek-8',this)">Simpan</button></div></div>
+        </div>
+
+        <div class="para-row" id="pr-ek-9">
+          <p>Pada jangka menengah, saya akan berkontribusi sebagai <mark class="hl-blue">dosen tidak tetap di PoltekSSN</mark> untuk menjembatani praktik operasional dengan pengembangan keilmuan. Saya akan mendorong integrasi studi kasus nyata ke dalam proses pembelajaran. Pendampingan terhadap pemerintah daerah akan diwujudkan melalui <mark class="hl-yellow">implementasi hasil penelitian pada proyek percontohan di tiga pemerintah daerah yang belum memiliki sistem deteksi serangan siber</mark>.</p>
+          <div class="para-note-col"><div class="para-note-box"><textarea placeholder="Catatan untuk paragraf ini…" data-id="ek-9"></textarea><button class="para-note-save" onclick="saveNote('ek-9',this)">Simpan</button></div></div>
+        </div>
+
+        <div class="para-row" id="pr-ek-10">
+          <p>Dalam jangka panjang, saya bercita-cita membangun <mark class="hl-green">ekosistem riset dan pembinaan keamanan siber nasional yang terstruktur, aplikatif, dan berkelanjutan</mark>. Model pembinaan mencakup: <mark class="hl-green">standardisasi nilai dasar kontrol keamanan minimal untuk seluruh pemerintah daerah, pembentukan TTIS daerah yang terintegrasi secara nasional, serta pengembangan mekanisme pengawasan dan evaluasi berbasis data</mark> untuk mengukur peningkatan kapasitas siber daerah secara kuantitatif.</p>
+          <div class="para-note-col"><div class="para-note-box"><textarea placeholder="Catatan untuk paragraf ini…" data-id="ek-10"></textarea><button class="para-note-save" onclick="saveNote('ek-10',this)">Simpan</button></div></div>
+        </div>
+
+        <div class="para-row" id="pr-ek-11">
+          <p>Bagi saya, <mark class="hl-yellow">Beasiswa LPDP adalah amanah negara untuk membangun talenta yang tidak hanya cerdas, tetapi juga siap mengabdi</mark>. Saya meyakini bahwa <mark class="hl-green">keamanan bukan sekadar perlindungan sistem, melainkan perlindungan kepercayaan publik terhadap negara</mark>. Melalui integrasi riset, teknologi, dan pembinaan SDM yang sistematis, saya ingin memastikan bahwa <mark class="hl-yellow">tidak ada lagi pemerintah daerah yang bergantung pada satu "penjaga tunggal", melainkan berdiri di atas sistem yang cerdas, tangguh, dan berdaulat</mark>.</p>
+          <div class="para-note-col"><div class="para-note-box"><textarea placeholder="Catatan untuk paragraf ini…" data-id="ek-11"></textarea><button class="para-note-save" onclick="saveNote('ek-11',this)">Simpan</button></div></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Legend -->
+    <div style="display:flex; gap:1rem; flex-wrap:wrap; padding:0.75rem 1rem; background:var(--white); border:1px solid var(--border); border-radius:10px; margin-bottom:2rem;">
+      <div style="font-size:0.72rem; font-weight:600; color:var(--text-muted); align-self:center;">Keterangan highlight:</div>
+      <div style="display:flex; align-items:center; gap:0.4rem; font-size:0.75rem;"><mark class="hl-yellow" style="padding:0.1rem 0.5rem;">Kuning</mark> Poin utama & argumen kunci</div>
+      <div style="display:flex; align-items:center; gap:0.4rem; font-size:0.75rem;"><mark class="hl-blue" style="padding:0.1rem 0.5rem;">Biru</mark> Fakta, institusi & program</div>
+      <div style="display:flex; align-items:center; gap:0.4rem; font-size:0.75rem;"><mark class="hl-green" style="padding:0.1rem 0.5rem;">Hijau</mark> Nilai, solusi & komitmen</div>
+    </div>
+  </div><!-- /section-fulltext -->
+
+  <!-- ══════════════════════════════════════════
+       LIST PERTANYAAN WAWANCARA LPDP
+  ══════════════════════════════════════════ -->
+  <div id="section-pertanyaan" class="section-block hidden">
+    <div class="section-label">
+      <span class="pill pill-purple">Wawancara</span>
+      <h2>List Pertanyaan LPDP</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <p style="font-size:0.875rem; color:var(--text-mid); margin-bottom:1.25rem; line-height:1.7;">Kumpulan pertanyaan wawancara LPDP lengkap dengan jawaban yang disusun berdasarkan isi kedua essay. Klik pertanyaan untuk melihat/menyembunyikan jawaban. Gunakan tombol <strong>Edit</strong> untuk mengubah pertanyaan atau jawaban, lalu <strong>Simpan</strong> untuk menyimpan perubahan.</p>
+
+    <!-- Filter, Search & Add button -->
+    <div class="q-filter-bar">
+      <button class="q-filter-btn active" onclick="filterQ('semua',this)">Semua</button>
+      <button class="q-filter-btn" onclick="filterQ('utama',this)">Pertanyaan Utama</button>
+      <button class="q-filter-btn" onclick="filterQ('studi',this)">Studi &amp; Universitas</button>
+      <button class="q-filter-btn" onclick="filterQ('pribadi',this)">Pribadi</button>
+      <button class="q-filter-btn" onclick="filterQ('org',this)">Organisasi</button>
+      <button class="q-filter-btn" onclick="filterQ('wawasan',this)">Wawasan &amp; Kebangsaan</button>
+      <input class="q-search" type="text" placeholder="🔍 Cari pertanyaan…" oninput="searchQ(this.value)">
+      <button class="q-add-btn" onclick="openAddModal()">
+        <span style="font-size:1rem;line-height:1;">+</span> Tambah Pertanyaan
+      </button>
+    </div>
+
+    <div id="q-list"></div>
+  </div><!-- /section-pertanyaan -->
+
+  <!-- ── MODAL TAMBAH PERTANYAAN ── -->
+  <div id="add-modal-overlay" class="add-modal-overlay" onclick="closeAddModal()">
+    <div class="add-modal" onclick="event.stopPropagation()">
+      <div class="add-modal-header">
+        <h3 class="add-modal-title">Tambah Pertanyaan Baru</h3>
+        <button class="add-modal-close" onclick="closeAddModal()">&#x2715;</button>
+      </div>
+      <div class="add-modal-body">
+        <!-- Kategori -->
+        <div class="add-field">
+          <label class="add-label">Kategori <span style="color:#DC4A26;">*</span></label>
+          <div class="add-cat-grid" id="add-cat-grid">
+            <button class="add-cat-btn active" data-cat="utama" onclick="selectCat(this)">
+              <span class="add-cat-dot" style="background:#92400E;"></span>Pertanyaan Utama
+            </button>
+            <button class="add-cat-btn" data-cat="studi" onclick="selectCat(this)">
+              <span class="add-cat-dot" style="background:#1E40AF;"></span>Studi &amp; Universitas
+            </button>
+            <button class="add-cat-btn" data-cat="pribadi" onclick="selectCat(this)">
+              <span class="add-cat-dot" style="background:#9D174D;"></span>Pribadi
+            </button>
+            <button class="add-cat-btn" data-cat="org" onclick="selectCat(this)">
+              <span class="add-cat-dot" style="background:#065F46;"></span>Organisasi
+            </button>
+            <button class="add-cat-btn" data-cat="wawasan" onclick="selectCat(this)">
+              <span class="add-cat-dot" style="background:#374151;"></span>Wawasan &amp; Kebangsaan
+            </button>
+          </div>
+        </div>
+        <!-- Pertanyaan -->
+        <div class="add-field">
+          <label class="add-label" for="add-q-input">Pertanyaan <span style="color:#DC4A26;">*</span></label>
+          <textarea id="add-q-input" class="add-textarea" rows="3" placeholder="Tulis pertanyaan wawancara di sini…"></textarea>
+        </div>
+        <!-- Jawaban -->
+        <div class="add-field">
+          <label class="add-label" for="add-a-input">Jawaban <span style="color:#64748B;font-weight:400;">(opsional, bisa diisi nanti)</span></label>
+          <textarea id="add-a-input" class="add-textarea" rows="5" placeholder="Tulis jawaban berdasarkan essay Anda…"></textarea>
+        </div>
+        <div id="add-error-msg" style="display:none; color:#DC4A26; font-size:0.8rem; padding:0.5rem 0;">
+          Pertanyaan tidak boleh kosong.
+        </div>
+      </div>
+      <div class="add-modal-footer">
+        <button class="add-btn-cancel" onclick="closeAddModal()">Batal</button>
+        <button class="add-btn-save" onclick="submitNewQ()">&#x2713; Simpan Pertanyaan</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════
+       DATA DIRI
+  ══════════════════════════════════════════ -->
+  <div id="section-datadiri" class="section-block hidden">
+    <div class="section-label">
+      <span class="pill pill-cyan">Profil</span>
+      <h2>Data Diri</h2>
+      <div class="section-line"></div>
+    </div>
+    <p style="font-size:0.875rem;color:var(--text-mid);margin-bottom:1.5rem;line-height:1.7;">Informasi data diri lengkap Fauzan Budi Setiawan sesuai dengan yang tercantum dalam berkas pendaftaran Beasiswa LPDP.</p>
+
+    <!-- Informasi Data Diri -->
+    <div class="card dd-section" style="margin-bottom:1.25rem;">
+      <div class="dd-section-title">Informasi Data Diri</div>
+      <div class="dd-grid">
+        <div class="dd-row"><span class="dd-label">Nama Lengkap</span><span class="dd-value">Fauzan Budi Setiawan</span></div>
+        <div class="dd-row"><span class="dd-label">Nama Panggilan</span><span class="dd-value">Fauzan</span></div>
+        <div class="dd-row"><span class="dd-label">NIK</span><span class="dd-value mono">3402052706990002</span></div>
+        <div class="dd-row"><span class="dd-label">No. KK</span><span class="dd-value mono">3175080307230009</span></div>
+        <div class="dd-row"><span class="dd-label">Jenis Kelamin</span><span class="dd-value">Laki-laki</span></div>
+        <div class="dd-row"><span class="dd-label">Status Perkawinan</span><span class="dd-value">Menikah</span></div>
+        <div class="dd-row"><span class="dd-label">Agama</span><span class="dd-value">Islam</span></div>
+        <div class="dd-row"><span class="dd-label">Tempat, Tanggal Lahir</span><span class="dd-value">Bantul, 27 Juni 1999</span></div>
+      </div>
+    </div>
+
+    <!-- Informasi Pekerjaan & Kontak -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1rem;margin-bottom:1.25rem;">
+      <div class="card dd-section" style="margin-bottom:0;">
+        <div class="dd-section-title">Informasi Pekerjaan & Kontak</div>
+        <div class="dd-grid" style="grid-template-columns:1fr;">
+          <div class="dd-row"><span class="dd-label">Jenis Pekerjaan</span><span class="dd-value">PNS</span></div>
+          <div class="dd-row"><span class="dd-label">Email Pribadi</span><span class="dd-value">fauzanbudis@gmail.com</span></div>
+          <div class="dd-row"><span class="dd-label">No. Telepon</span><span class="dd-value mono">+62 877-3818-7212</span></div>
+          <div class="dd-row full"><span class="dd-label">Alamat</span><span class="dd-value">Cluster Citra Garden 4 Blok A2, Jalan Mangga, Pasir Putih, Sawangan, Depok, Jawa Barat 16519</span></div>
+          <div class="dd-row"><span class="dd-label">Instagram</span><span class="dd-value">@fauzanbs_</span></div>
+          <div class="dd-row"><span class="dd-label">Facebook / Twitter</span><span class="dd-value" style="color:var(--text-muted);">Tidak Ada</span></div>
+        </div>
+      </div>
+
+      <div class="card dd-section" style="margin-bottom:0;">
+        <div class="dd-section-title">Informasi Keluarga</div>
+        <div style="display:flex;flex-direction:column;gap:0.75rem;">
+          <!-- Ayah -->
+          <div style="background:#F0FDFF;border:1px solid #CFFAFE;border-radius:10px;padding:0.85rem 1rem;">
+            <div style="font-size:0.7rem;font-weight:700;color:#0E7490;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.5rem;">Ayah</div>
+            <div class="dd-grid" style="grid-template-columns:1fr 1fr;gap:0.4rem;">
+              <div><div class="dd-label">Nama</div><div class="dd-value" style="font-size:0.82rem;">Agus Suharta</div></div>
+              <div><div class="dd-label">Tgl. Lahir</div><div class="dd-value" style="font-size:0.82rem;">02 Agustus 1962</div></div>
+              <div><div class="dd-label">Pendidikan</div><div class="dd-value" style="font-size:0.82rem;">S1</div></div>
+              <div><div class="dd-label">No. HP</div><div class="dd-value mono" style="font-size:0.78rem;">081392659035</div></div>
+              <div style="grid-column:1/-1;"><div class="dd-label">Alamat</div><div class="dd-value" style="font-size:0.78rem;">Kiringan RT 02, Glodogan, Sidomulyo, Bambanglipuro, Bantul 55764</div></div>
+            </div>
+          </div>
+          <!-- Ibu -->
+          <div style="background:#F0FDFF;border:1px solid #CFFAFE;border-radius:10px;padding:0.85rem 1rem;">
+            <div style="font-size:0.7rem;font-weight:700;color:#0E7490;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.5rem;">Ibu</div>
+            <div class="dd-grid" style="grid-template-columns:1fr 1fr;gap:0.4rem;">
+              <div><div class="dd-label">Nama</div><div class="dd-value" style="font-size:0.82rem;">Sri Astuti Budiasih</div></div>
+              <div><div class="dd-label">Tgl. Lahir</div><div class="dd-value" style="font-size:0.82rem;">24 Juli 1967</div></div>
+              <div><div class="dd-label">Pendidikan</div><div class="dd-value" style="font-size:0.82rem;">S1</div></div>
+              <div><div class="dd-label">No. HP</div><div class="dd-value mono" style="font-size:0.78rem;">0817275684</div></div>
+              <div style="grid-column:1/-1;"><div class="dd-label">Alamat</div><div class="dd-value" style="font-size:0.78rem;">Kiringan RT 02, Glodogan, Sidomulyo, Bambanglipuro, Bantul 55764</div></div>
+            </div>
+          </div>
+          <!-- Istri -->
+          <div style="background:#F5F3FF;border:1px solid #C4B5FD;border-radius:10px;padding:0.85rem 1rem;">
+            <div style="font-size:0.7rem;font-weight:700;color:#7C3AED;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.5rem;">Istri</div>
+            <div class="dd-grid" style="grid-template-columns:1fr 1fr;gap:0.4rem;">
+              <div><div class="dd-label">Nama</div><div class="dd-value" style="font-size:0.82rem;">Fadilah Az Zahra</div></div>
+              <div><div class="dd-label">Tgl. Lahir</div><div class="dd-value" style="font-size:0.82rem;">02 Januari 2001</div></div>
+              <div><div class="dd-label">NIK</div><div class="dd-value mono" style="font-size:0.78rem;">3175084201010011</div></div>
+              <div><div class="dd-label">Pendidikan</div><div class="dd-value" style="font-size:0.82rem;">S1</div></div>
+              <div><div class="dd-label">No. HP</div><div class="dd-value mono" style="font-size:0.78rem;">085156441726</div></div>
+              <div style="grid-column:1/-1;"><div class="dd-label">Alamat</div><div class="dd-value" style="font-size:0.78rem;">Jl. Kudin No. 38, Makasar, Makasar, Jakarta Timur, DKI Jakarta 13570</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Riwayat Pendidikan -->
+    <div class="card dd-section" style="margin-bottom:1.25rem;">
+      <div class="dd-section-title">Riwayat Pendidikan</div>
+      <div class="dd-table-wrap">
+        <table class="dd-table">
+          <thead><tr><th>Jenjang</th><th>Tahun Masuk</th><th>Tahun Lulus</th><th>Nama Sekolah</th><th>Bidang Studi</th><th>IPK/Nilai</th><th>No. Ijazah</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><span class="dd-badge">D4</span></td>
+              <td>2017</td><td>2021</td>
+              <td><strong>Politeknik Siber dan Sandi Negara</strong></td>
+              <td>Rekayasa Perangkat Keras Kriptografi</td>
+              <td><strong style="color:#0E7490;">3.73</strong></td>
+              <td class="mono" style="font-size:0.75rem;">203022021000026</td>
+              <td><span class="dd-badge dd-badge-green">Lulus</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Riwayat Pekerjaan -->
+    <div class="card dd-section" style="margin-bottom:1.25rem;">
+      <div class="dd-section-title">Riwayat Pekerjaan</div>
+      <div class="dd-table-wrap">
+        <table class="dd-table">
+          <thead><tr><th>Institusi</th><th>Posisi</th><th>Tahun Masuk</th><th>Tahun Keluar</th><th>Pendapatan (Rp)</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>Badan Siber dan Sandi Negara<br><small style="color:var(--text-muted);">Direktorat Operasi Keamanan Siber</small></td>
+              <td>Penelaah Teknis Kebijakan pada Tim IT Security Assessment (ITSA)</td>
+              <td>2021</td><td>2023</td><td>8.000.000</td>
+            </tr>
+            <tr>
+              <td>Badan Siber dan Sandi Negara<br><small style="color:var(--text-muted);">Politeknik Siber dan Sandi Negara</small></td>
+              <td>Penelaah Teknis Kebijakan pada Unit Pengasuhan Mental dan Kedisiplinan (PMK)</td>
+              <td>2023</td><td>2025</td><td>8.000.000</td>
+            </tr>
+            <tr>
+              <td>Badan Siber dan Sandi Negara<br><small style="color:var(--text-muted);">Direktorat Keamanan Siber dan Sandi Pemerintah Daerah</small></td>
+              <td>Manggala Informatika Ahli Pertama pada Tim Tanggap Insiden Siber (TTIS)</td>
+              <td>2025</td><td>2026</td><td>9.000.000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Pengalaman Organisasi -->
+    <div class="card dd-section" style="margin-bottom:1.25rem;">
+      <div class="dd-section-title">Pengalaman Organisasi</div>
+      <div class="dd-table-wrap">
+        <table class="dd-table">
+          <thead><tr><th>Jenjang</th><th>Organisasi</th><th>Tahun</th><th>Periode</th><th>Posisi</th></tr></thead>
+          <tbody>
+            <tr><td><span class="dd-badge">SMP</span></td><td>OSIS</td><td>2013</td><td>Januari – Desember</td><td>Anggota</td></tr>
+            <tr><td><span class="dd-badge dd-badge-amber">SMA</span></td><td>Rohis Darussalam</td><td>2015</td><td>Januari – Desember</td><td>Staff Divisi Kaderisasi</td></tr>
+            <tr><td><span class="dd-badge dd-badge-amber">SMA</span></td><td>Rohis Darussalam</td><td>2016</td><td>Januari – Desember</td><td>Kepala Divisi Kaderisasi</td></tr>
+            <tr><td><span class="dd-badge dd-badge-amber">SMA</span></td><td>Mache Tabligh Akbar (Machetar)</td><td>2016</td><td>Januari – Oktober</td><td>Ketua Umum</td></tr>
+            <tr><td><span class="dd-badge dd-badge-amber">SMA</span></td><td>Puspanegara Anak Saleh Competition (PASCO)</td><td>2016</td><td>Januari – Oktober</td><td>Ketua Umum</td></tr>
+            <tr><td><span class="dd-badge" style="background:#F0FDF4;color:#15803D;border-color:#86EFAC;">Luar Sekolah</span></td><td>Organisasi Pemuda Pemudi PEKIK</td><td>2014</td><td>Januari – Desember</td><td>Anggota</td></tr>
+            <tr><td><span class="dd-badge dd-badge-green">Perguruan Tinggi</span></td><td>Senat Mahasiswa PoltekSSN</td><td>2018</td><td>Januari – Desember</td><td>Staff Bidang Akademik Departemen Pendidikan</td></tr>
+            <tr><td><span class="dd-badge dd-badge-green">Perguruan Tinggi</span></td><td>Senat Mahasiswa PoltekSSN</td><td>2019</td><td>Januari – Desember</td><td>Kepala Bidang Akademik Departemen Pendidikan</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Prestasi & Penghargaan -->
+    <div class="card dd-section" style="margin-bottom:1.25rem;">
+      <div class="dd-section-title">Prestasi & Penghargaan</div>
+      <div class="dd-table-wrap">
+        <table class="dd-table">
+          <thead><tr><th>Tahun</th><th>Prestasi</th><th>Tingkat</th><th>Juara</th><th>Kategori</th><th>Penyelenggara</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>2018</td>
+              <td>Sanapati Cendekia – Mahasiswa Berprestasi I, Tingkat I Kelas D, Semester Gasal</td>
+              <td>Sekolah/Universitas</td><td>1</td><td>Akademik</td><td>Sekolah Tinggi Sandi Negara</td>
+            </tr>
+            <tr>
+              <td>2018</td>
+              <td>Sanapati Cendekia – Mahasiswa Berprestasi II, Tingkat I Kelas A, Semester Genap</td>
+              <td>Sekolah/Universitas</td><td>2</td><td>Akademik</td><td>Sekolah Tinggi Sandi Negara</td>
+            </tr>
+            <tr>
+              <td>2019</td>
+              <td>Sanapati Cendekia – Mahasiswa Berprestasi II, Tingkat II Kelas TRPK Proton, Semester Gasal</td>
+              <td>Sekolah/Universitas</td><td>2</td><td>Akademik</td><td>Sekolah Tinggi Sandi Negara</td>
+            </tr>
+            <tr>
+              <td>2019</td>
+              <td>Sanapati Cendekia – Mahasiswa Berprestasi II, Tingkat II Kelas TRPK Proton, Semester Genap</td>
+              <td>Sekolah/Universitas</td><td>2</td><td>Akademik</td><td>Sekolah Tinggi Sandi Negara</td>
+            </tr>
+            <tr>
+              <td>2020</td>
+              <td>Sanapati Cendekia – Mahasiswa Berprestasi III, Tingkat III Kelas RPK Proton, Semester Gasal</td>
+              <td>Sekolah/Universitas</td><td>3</td><td>Akademik</td><td>Sekolah Tinggi Sandi Negara</td>
+            </tr>
+            <tr>
+              <td>2022</td>
+              <td>Penghargaan dari Kepala Badan Siber dan Sandi Negara</td>
+              <td><span class="dd-badge">Nasional</span></td><td>–</td><td>–</td><td>Kepala BSSN</td>
+            </tr>
+            <tr>
+              <td>2022</td>
+              <td>Penghargaan dari Kepala Sekretariat Presiden</td>
+              <td><span class="dd-badge">Nasional</span></td><td>–</td><td>–</td><td>Kepala Sekretariat Presiden</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Sertifikasi -->
+    <div class="card dd-section" style="margin-bottom:1.25rem;">
+      <div class="dd-section-title">Sertifikasi / Kompetensi</div>
+      <div class="dd-table-wrap">
+        <table class="dd-table">
+          <thead><tr><th>Tahun</th><th>Sertifikasi</th><th>Tingkat</th><th>Jenis</th><th>Penyelenggara</th></tr></thead>
+          <tbody>
+            <tr><td>2023</td><td>Ethical Hacking Essentials (EHE)</td><td><span class="dd-badge">Internasional</span></td><td>Kompetensi</td><td>EC-Council</td></tr>
+            <tr><td>2023</td><td>Alibaba Cloud Certified Associate – Big Data</td><td><span class="dd-badge">Internasional</span></td><td>Kompetensi</td><td>Alibaba Cloud</td></tr>
+            <tr><td>2023</td><td>Alibaba Cloud Certified Professional – Big Data</td><td><span class="dd-badge">Internasional</span></td><td>Kompetensi</td><td>Alibaba Cloud</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Kemampuan Bahasa -->
+    <div class="card dd-section" style="margin-bottom:1.25rem;">
+      <div class="dd-section-title">Kemampuan Bahasa</div>
+      <div class="dd-table-wrap">
+        <table class="dd-table">
+          <thead><tr><th>Bahasa</th><th>Skor</th><th>Tahun Sertifikat</th><th>Masa Berlaku</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>Inggris (TOEFL ITP)</td>
+              <td><strong style="color:#0E7490;font-size:1rem;">500</strong></td>
+              <td>2026</td>
+              <td>28 Januari 2028</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Pelatihan -->
+    <div class="card dd-section" style="margin-bottom:1.25rem;">
+      <div class="dd-section-title">Pengalaman Pelatihan / Workshop</div>
+      <div class="dd-table-wrap">
+        <table class="dd-table">
+          <thead><tr><th>Pelatihan / Workshop</th><th>Institusi</th><th>Tanggal</th></tr></thead>
+          <tbody>
+            <tr><td>Google Cybersecurity Professional</td><td>Google</td><td>31 Maret 2024</td></tr>
+            <tr><td>Alibaba Cloud: Big Data Fundamentals</td><td>Digitalent Kominfo</td><td>27 Desember 2023</td></tr>
+            <tr><td>Cyber Novice – Ethical Hacking</td><td>Digitalent Kominfo</td><td>25 September 2023</td></tr>
+            <tr><td>Data Science Fundamental</td><td>Digitalent Kominfo</td><td>25 Mei 2022</td></tr>
+            <tr><td>Data Scientist</td><td>Digitalent Kominfo</td><td>14 Juli 2022</td></tr>
+            <tr><td>Pelatihan Simulasi Keamanan Siber Smart City Focused on Cyber Physical System Angkatan ke-8</td><td>Pusat Pengembangan SDM BSSN</td><td>31 Maret 2023</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Riset & Penelitian -->
+    <div class="card dd-section" style="margin-bottom:1.25rem;">
+      <div class="dd-section-title">Pengalaman Riset / Penelitian</div>
+      <div class="dd-table-wrap">
+        <table class="dd-table">
+          <thead><tr><th>Tahun</th><th>Judul Riset</th><th>Sumber Dana</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>2021</td>
+              <td>Implementasi Protokol MQTT dan Skema Lightweight and Secure Password Based Smart Home Authentication Protocol (LSP-SHAP) berbasis Elliptic Curve Cryptography pada Prototipe Lingkungan Rumah Pintar</td>
+              <td>Politeknik Siber dan Sandi Negara (Tugas Akhir)</td>
+            </tr>
+            <tr>
+              <td>2020</td>
+              <td>Thermomera – IoT Makers Development Program (IMDP)</td>
+              <td>X-Camp XL Axiata</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Publikasi -->
+    <div class="card dd-section" style="margin-bottom:1.25rem;">
+      <div class="dd-section-title">Karya: Buku / Jurnal / Makalah</div>
+      <div class="dd-table-wrap">
+        <table class="dd-table">
+          <thead><tr><th>Tipe</th><th>Tahun</th><th>Judul</th><th>Penerbit / Jurnal / Media</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><span class="dd-badge">Jurnal</span></td><td>2020</td>
+              <td>Comparison of Authentication Schemes on IoT</td>
+              <td>2020 2nd International Conference on Industrial Electrical and Electronics (ICIEE) – IEEE</td>
+            </tr>
+            <tr>
+              <td><span class="dd-badge">Jurnal</span></td><td>2021</td>
+              <td>Securing Data Communication Through MQTT Protocol with AES-256 Encryption Algorithm CBC Mode on ESP32-Based Smart Homes</td>
+              <td>2021 International Conference on Computer System, Information Technology, and Electrical Engineering (COSITE) – IEEE</td>
+            </tr>
+            <tr>
+              <td><span class="dd-badge">Jurnal</span></td><td>2021</td>
+              <td>Access Control Prototype using Modified RAP-WOTA with Timestamp Protocol Based on Arduino Mega 2560</td>
+              <td>2021 International Conference on Radar, Antenna, Microwave, Electronics, and Telecommunications (ICRAMET) – IEEE</td>
+            </tr>
+            <tr>
+              <td><span class="dd-badge">Jurnal</span></td><td>2022</td>
+              <td>Principal Component Analysis and Data Encryption Model for Face Recognition System</td>
+              <td>2022 2nd International Conference on Electronic and Electrical Engineering and Intelligent System (ICE3IS) – IEEE</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Konferensi -->
+    <div class="card dd-section" style="margin-bottom:1.25rem;">
+      <div class="dd-section-title">Konferensi & Seminar</div>
+      <div class="dd-table-wrap">
+        <table class="dd-table">
+          <thead><tr><th>Judul Kegiatan</th><th>Tahun</th><th>Partisipasi</th><th>Penyelenggara</th><th>Lokasi</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>2nd International Conference on Industrial Electrical and Electronics (ICIEE)</td>
+              <td>2020</td>
+              <td><span class="dd-badge">Presenter</span></td>
+              <td>Universitas Sultan Ageng Tirtayasa (Untirta)</td>
+              <td>Lombok, NTT (Online)</td>
+            </tr>
+            <tr>
+              <td>International Conference on Computer System, Information Technology, and Electrical Engineering (COSITE)</td>
+              <td>2021</td>
+              <td><span class="dd-badge">Presenter</span></td>
+              <td>Universitas Syiah Kuala (USK)</td>
+              <td>Online</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div><!-- /section-datadiri -->
+
+</div><!-- /page -->
+
+<div class="footer">
+  Infografis Essay LPDP · Fauzan Budi Setiawan · Kandidat MTI UGM Network &amp; Cybersecurity 2025
+</div>
+
+<script>
+// ── SECTIONS ──
+var sections = {
+  perbandingan:'#475569', ps:'#2563EB', komitmen:'#0D9488',
+  keterkaitan:'#16A34A', fulltext:'#D97706', pertanyaan:'#7C3AED', datadiri:'#0E7490'
+};
+var openState = {
+  perbandingan:false, ps:false, komitmen:false, keterkaitan:false,
+  fulltext:false, pertanyaan:false, datadiri:false
+};
+var sectionLabels = {
+  fulltext:'Full Text', perbandingan:'Perbandingan', ps:'Personal Statement',
+  komitmen:'Essay Komitmen', keterkaitan:'Keterkaitan',
+  pertanyaan:'List Pertanyaan', datadiri:'Data Diri'
+};
+
+// ── NAV DROPDOWN ──
+var navOpen = false;
+function toggleNavDropdown() {
+  navOpen = !navOpen;
+  var dd   = document.getElementById('nav-dropdown');
+  var icon = document.getElementById('hb-icon');
+  var lbl  = document.getElementById('hb-label');
+  if (dd)   dd.classList.toggle('open', navOpen);
+  if (icon) icon.textContent = navOpen ? '\u2715' : '\u2630';
+  if (lbl)  lbl.textContent  = navOpen ? 'Tutup' : 'Menu';
+}
+
+function updateActiveChips() {
+  var label = document.getElementById('nav-active-label');
+  if (!label) return;
+  var active = Object.keys(openState).filter(function(k) { return openState[k]; });
+  if (active.length === 0) {
+    label.innerHTML = '<span style="font-size:0.72rem;color:#64748B;">Pilih menu di bawah untuk menampilkan konten</span>';
+    return;
+  }
+  var html = '';
+  for (var i = 0; i < active.length; i++) {
+    var k = active[i];
+    var col = sections[k];
+    var lname = sectionLabels[k] || k;
+    html += '<span class="nav-active-chip" data-key="' + k + '" style="background:' + col + '33;border-color:' + col + '77;">'
+          + '<span style="width:6px;height:6px;border-radius:50%;background:' + col + ';flex-shrink:0;display:inline-block;"></span>'
+          + lname
+          + '<span class="chip-x">\u2715</span>'
+          + '</span>';
+  }
+  label.innerHTML = html;
+  // attach click handlers
+  var chips = label.querySelectorAll('.nav-active-chip');
+  for (var j = 0; j < chips.length; j++) {
+    chips[j].addEventListener('click', (function(key) {
+      return function() { toggleSection(key); };
+    })(chips[j].getAttribute('data-key')));
+  }
+}
+
+// ── SECTION TOGGLE ──
+function applyState() {
+  Object.keys(sections).forEach(function(key) {
+    var el  = document.getElementById('section-' + key);
+    var btn = document.getElementById('btn-' + key);
+    if (!el || !btn) return;
+    if (openState[key]) {
+      el.classList.remove('hidden');
+      btn.style.background  = sections[key];
+      btn.style.color       = '#fff';
+      btn.style.borderColor = sections[key];
+      btn.style.opacity     = '1';
+    } else {
+      el.classList.add('hidden');
+      btn.style.background  = 'transparent';
+      btn.style.color       = '#94A3B8';
+      btn.style.borderColor = 'rgba(255,255,255,0.1)';
+      btn.style.opacity     = '0.7';
+    }
+  });
+  updateActiveChips();
+}
+
+function toggleSection(key) {
+  openState[key] = !openState[key];
+  var sub = document.getElementById('sub-' + key);
+  if (sub && !openState[key]) sub.classList.remove('open');
+  applyState();
+}
+
+// ── SUB-MENU ──
+var subOpen = { ps: false, komitmen: false };
+function toggleSubMenu(key) {
+  subOpen[key] = !subOpen[key];
+  var sub = document.getElementById('sub-' + key);
+  if (sub) sub.classList.toggle('open', subOpen[key]);
+}
+function scrollToSub(id) {
+  var el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// ── NOTES ──
+var notesOn = false;
+function toggleNotes() {
+  notesOn = !notesOn;
+  var btn = document.getElementById('btn-notes');
+  if (btn) {
+    btn.classList.toggle('notes-on', notesOn);
+    btn.textContent = notesOn ? '\u270f Sembunyikan Catatan' : '\u270f Buat Catatan';
+  }
+  document.querySelectorAll('.para-row').forEach(function(r) {
+    r.classList.toggle('notes-visible', notesOn);
+  });
+}
+function saveNote(id, btn) {
+  var ta = document.querySelector('textarea[data-id="' + id + '"]');
+  if (!ta) return;
+  try {
+    var all = JSON.parse(localStorage.getItem('essay-notes') || '{}');
+    all[id] = ta.value;
+    localStorage.setItem('essay-notes', JSON.stringify(all));
+    btn.textContent = '\u2713 Tersimpan';
+    btn.classList.add('saved');
+    setTimeout(function() { btn.textContent = 'Simpan'; btn.classList.remove('saved'); }, 1800);
+  } catch(e) {}
+}
+function loadAllNotes() {
+  try {
+    var all = JSON.parse(localStorage.getItem('essay-notes') || '{}');
+    Object.keys(all).forEach(function(id) {
+      var ta = document.querySelector('textarea[data-id="' + id + '"]');
+      if (ta && all[id]) ta.value = all[id];
+    });
+  } catch(e) {}
+}
+
+// ── PERTANYAAN ──
+var QKEY = 'lpdp-q-v2';
+var defaultQ=[
+  {id:'q1',cat:'utama',q:'Ceritakan tentang diri Anda (Tell me about yourself)',
+   a:'Nama saya Fauzan Budi Setiawan, ASN di Badan Siber dan Sandi Negara (BSSN). Saya lulusan PoltekSSN 2021 dengan predikat cum laude dan IPK 3,73. Berasal dari keluarga guru yang menanamkan nilai pendidikan sebagai fondasi hidup. Sejak kuliah, saya mendalami keamanan siber dan menghasilkan penelitian yang dipublikasikan di prosiding IEEE. Saat ini saya fokus pada penguatan keamanan siber pemerintah daerah melalui pembentukan Tim Tanggap Insiden Siber (TTIS) di seluruh Indonesia.'},
+  {id:'q2',cat:'utama',q:'Apa yang membuat Anda layak menerima beasiswa LPDP?',
+   a:'Saya memiliki kombinasi rekam jejak akademik unggul (IPK 3,73, cum laude, publikasi IEEE, Hak Cipta DJKI) dengan pengalaman profesional nyata—mengamankan HUT RI ke-77, Pemilu Presiden 2024, dan membina 552 pemerintah daerah. Saya menyaksikan langsung kesenjangan siber di lapangan dan telah memikirkan solusinya secara konkret: integrasi ML/AI. Beasiswa LPDP bukan investasi untuk saya pribadi, tetapi untuk penguatan keamanan siber nasional yang berkelanjutan.'},
+  {id:'q3',cat:'utama',q:'Apa visi dan misi Anda ke depan?',
+   a:'Visi saya: ekosistem keamanan siber pemerintah daerah yang cerdas, mandiri, dan berdaulat. Misi jangka pendek: kembali ke BSSN, diseminasi hasil riset, melatih 552 pemda via webinar nasional. Jangka menengah: dosen luar biasa PoltekSSN, pilot sistem deteksi ML di tiga pemda. Jangka panjang: PoltekSSN sebagai pusat riset siber sektor publik, standarisasi TTIS daerah nasional, mendukung Indonesia Emas 2045.'},
+  {id:'q4',cat:'utama',q:'Di mana Anda melihat diri Anda dalam 5-10 tahun ke depan?',
+   a:'Dalam 5 tahun: selesai studi, publikasi di Scopus/IEEE, dan implementasi prototipe ML di tiga pemda sebagai pilot. Dalam 10 tahun: memimpin pengembangan standar nasional keamanan siber pemda di BSSN, aktif mengajar di PoltekSSN, dan membangun ekosistem riset terapan yang menghubungkan akademisi, pemerintah, dan industri keamanan siber Indonesia.'},
+  {id:'q5',cat:'utama',q:'Apa pencapaian terbesar Anda?',
+   a:'Membangun kompetensi offensive security dari nol secara otodidak hingga dipercaya mengamankan sistem Pemilu Presiden 2024—agenda nasional paling kritis. Di sisi akademik: publikasi IEEE, Hak Cipta DJKI, dan lulus cum laude. Namun yang paling saya banggakan adalah pola pikir yang terbentuk: setiap ketertinggalan saya jadikan pemicu untuk berkembang, bukan alasan untuk menyerah.'},
+  {id:'q6',cat:'utama',q:'Siapa tokoh yang paling mempengaruhi Anda?',
+   a:'Orang tua saya—khususnya ibu yang berprofesi guru—menanamkan bahwa pendidikan adalah fondasi karakter dan tanggung jawab. Nilai ini membuat saya bertahan di asrama semimiliter PoltekSSN dan terus belajar di setiap penugasan baru. Dalam konteks profesional, BJ. Habibie adalah teladan: ilmuwan yang mendedikasikan keahliannya sepenuhnya untuk kemajuan bangsa.'},
+  {id:'q7',cat:'utama',q:'Apa kelemahan dan kekuatan Anda?',
+   a:'Kekuatan: ketahanan belajar dan adaptasi yang terbukti—saya mampu menguasai hal baru secara otodidak di lingkungan asing, terbukti dari tiga penugasan berbeda di BSSN. Kelemahan: kecenderungan perfectionism. Namun saya mengatasinya dengan manajemen waktu terstruktur sejak asrama—menyusun lini masa rinci dan waktu cadangan untuk setiap tugas.'},
+  {id:'q8',cat:'utama',q:'Apa yang akan rekan dan atasan katakan tentang Anda?',
+   a:'Rekan di BSSN akan menyebut saya tekun dan tidak mudah menyerah pada tantangan teknis baru. Atasan mempercayai saya pada agenda strategis nasional—Pemilu 2024—itu adalah bentuk pengakuan yang paling nyata. Di PoltekSSN, saya dikenal sebagai pembina yang tidak hanya mengajarkan teknis, tetapi juga menekankan pembentukan karakter. Pembimbing IEEE saya menggambarkan saya sebagai peneliti serius yang mampu menghasilkan karya tingkat internasional.'},
+  {id:'q9',cat:'studi',q:'Mengapa Anda ingin melanjutkan pendidikan ke jenjang magister?',
+   a:'Saya menyaksikan langsung bahwa pendekatan keamanan konvensional tidak cukup menghadapi ancaman siber modern di pemerintah daerah. Solusi yang saya yakini—integrasi ML/AI—memerlukan fondasi keilmuan yang jauh lebih dalam dari yang bisa diperoleh otodidak. Ada kesenjangan nyata antara kebutuhan riset sistematis dengan kapasitas saya saat ini. Studi magister bukan kemewahan, melainkan keharusan strategis agar solusi yang saya rancang valid secara ilmiah dan benar-benar implementatif.'},
+  {id:'q10',cat:'studi',q:'Mengapa memilih Program MTI UGM konsentrasi Network and Cybersecurity?',
+   a:'MTI UGM menawarkan kombinasi tepat: kurikulum teknis kuat (Keamanan TI, Jaringan Lanjut, Keamanan Cloud, Kriptografi) dengan ekosistem riset AI aktif melalui UGM AI Center of Excellence—berkolaborasi dengan NVIDIA, Telkom, Microsoft, dan Hanyang University. Ini bukan sekadar program akademik, melainkan platform mengembangkan prototipe sistem keamanan berbasis ML yang langsung dapat diimplementasikan di pemerintah daerah.'},
+  {id:'q11',cat:'studi',q:'Apakah Anda yakin bisa menyelesaikan studi tepat waktu?',
+   a:'Ya, saya yakin. Rekam jejak akademik saya konsisten—lulus cum laude IPK 3,73 dalam lingkungan asrama yang sangat disiplin. Saya terbiasa menyusun lini masa terperinci dan waktu cadangan untuk setiap tugas. Topik tesis sudah jelas dan berakar dari pengalaman lapangan lima tahun—bukan dari nol. Manajemen waktu terstruktur ini sudah terinternalisasi sejak PoltekSSN.'},
+  {id:'q12',cat:'studi',q:'Apa rencana riset Anda selama studi?',
+   a:'Tahun 1: menguasai kurikulum inti, tinjauan pustaka mendalam ML/AI dalam keamanan siber, bergabung komunitas Jogja Cyber Security (JCS). Tahun 2: tesis "Integrasi ML dan AI untuk Peningkatan Sistem Deteksi dan Respons Serangan Siber"—menghasilkan prototipe yang dapat diimplementasikan di pemerintah daerah. Target: publikasi di jurnal Scopus atau prosiding IEEE.'},
+  {id:'q13',cat:'studi',q:'Mengapa tidak melanjutkan studi di universitas luar negeri?',
+   a:'MTI UGM sangat strategis karena relevansinya langsung dengan kebutuhan nasional. UGM sebagai universitas riset kelas dunia dengan ekosistem AI aktif memberikan keseimbangan antara kualitas akademik internasional dan pemahaman konteks lokal pemerintahan Indonesia. Komitmen saya kembali mengabdi di BSSN setelah studi juga memperkuat alasan memilih universitas nasional terbaik yang memperkuat jejaring implementasi hasil riset.'},
+  {id:'q14',cat:'studi',q:'Bagaimana Anda menghadapi tantangan akademik di jenjang magister?',
+   a:'Saya telah terbukti bisa menguasai hal baru dari nol—offensive security di BSSN adalah buktinya. Untuk studi magister, saya akan menerapkan strategi yang sama: perencanaan terstruktur, konsistensi belajar, dan tidak ragu meminta bantuan dari dosen maupun komunitas akademik. Pengalaman mengolah data evaluasi TTIS 2025 juga telah melatih kemampuan research methodology saya secara nyata.'},
+  {id:'q15',cat:'pribadi',q:'Ceritakan latar belakang keluarga Anda',
+   a:'Saya dibesarkan dalam keluarga guru yang menempatkan pendidikan sebagai fondasi utama pembentukan karakter dan tanggung jawab. Nilai ini menjadi landasan saya dalam setiap proses pembelajaran—bahwa belajar bukan hanya untuk diri sendiri, tetapi untuk berkontribusi. Latar belakang keluarga sederhana namun kuat secara nilai ini membentuk etos kerja dan ketekunan saya hingga hari ini.'},
+  {id:'q16',cat:'pribadi',q:'Bagaimana Anda membentuk disiplin diri?',
+   a:'Disiplin terbentuk sejak pendidikan berasrama semimiliter PoltekSSN. Rutinitas ketat melatih saya mengelola waktu terstruktur: menyusun lini masa rinci untuk setiap tugas dan menyiapkan waktu cadangan. Kebiasaan ini berlanjut di BSSN—membantu saya menjaga konsistensi kinerja di tiga unit kerja yang sangat berbeda tuntutannya dalam lima tahun.'},
+  {id:'q17',cat:'pribadi',q:'Apa motivasi terbesar Anda mendaftar beasiswa LPDP?',
+   a:'Motivasi utama adalah kesenjangan nyata yang saya saksikan setiap hari: ratusan pemerintah daerah dengan kapasitas siber sangat terbatas, sementara ancaman digital terus meningkat drastis—5,4 miliar trafik anomali pada 2025. Saya tidak ingin hanya menjadi saksi. LPDP adalah amanah negara untuk membangun talenta yang siap mengabdi, dan ilmu dari studi ini akan langsung berdampak pada keamanan layanan publik digital di seluruh Indonesia.'},
+  {id:'q18',cat:'pribadi',q:'Bagaimana cara Anda mengatasi kegagalan dan ketertinggalan?',
+   a:'Saat masuk Tim ITSA, saya tidak punya latar belakang offensive security sama sekali dan merasa tertinggal jauh. Alih-alih menyerah, saya belajar dari nol: membaca referensi, mempelajari laporan teknis, membangun lab virtual sendiri. Proses itu mengajarkan bahwa ketertinggalan bukan alasan berhenti, melainkan sinyal untuk bekerja lebih keras dan cerdas. Pola pikir ini yang saya pegang di setiap tantangan baru.'},
+  {id:'q19',cat:'pribadi',q:'Bagaimana Anda mengatasi rasa tidak percaya diri?',
+   a:'Di PMK PoltekSSN, saya menyadari kelemahan dalam public speaking dan keberanian bertanya. Saya mengatasinya secara terstruktur: mencatat pertanyaan sejak awal diskusi dan berkomitmen menyampaikan minimal satu pertanyaan per forum. Hasilnya bertahap tapi nyata—akhirnya mampu mengampu mata kuliah, menjadi MC wisuda, dan tampil di berbagai forum nasional. Kelemahan bukan takdir; ia bisa diatasi dengan komitmen dan strategi yang konsisten.'},
+  {id:'q20',cat:'pribadi',q:'Apakah keluarga mendukung keputusan melanjutkan studi?',
+   a:'Ya, sepenuhnya. Nilai pendidikan sudah tertanam kuat dalam keluarga sejak kecil—orang tua guru yang percaya pendidikan adalah investasi terbaik. Mereka mendukung setiap langkah, termasuk keputusan melanjutkan studi magister. Dukungan mereka bukan hanya moral, tetapi juga menjadi pengingat bahwa setiap kesempatan belajar harus dimanfaatkan sebaik-baiknya dan dikembalikan dalam bentuk pengabdian nyata.'},
+  {id:'q21',cat:'pribadi',q:'Apa arti nasionalisme bagi Anda dan bagaimana Anda membuktikannya?',
+   a:'Nasionalisme bagi saya bukan soal simbol, melainkan soal kontribusi nyata. Saya membuktikannya dengan mengabdi di BSSN melindungi infrastruktur digital pemerintah Indonesia. Setiap penilaian keamanan yang dilakukan dan setiap pemda yang dibantu membangun TTIS adalah bentuk nyata cinta tanah air. Melanjutkan studi dan kembali mengabdi adalah cara saya memastikan kontribusi itu terus berkembang dan berdampak lebih luas.'},
+  {id:'q22',cat:'pribadi',q:'Apa arti kepemimpinan bagi Anda?',
+   a:'Pemimpin yang baik mengatakan "ayo kita lakukan bersama", bukan "kamu yang lakukan". Di BSSN, saya tidak hanya memberi instruksi teknis kepada pemda—saya turun langsung mendampingi, membangun prosedur bersama, berbagi pengetahuan. Di PoltekSSN, saya menjadi fasilitator yang menciptakan ruang aman untuk taruna berkembang. Kepemimpinan sejati adalah tentang memberdayakan orang lain untuk tumbuh.'},
+  {id:'q23',cat:'org',q:'Apa pengalaman organisasi yang paling membentuk karakter Anda?',
+   a:'Keterlibatan sebagai pembina dalam Latsitardanus XLIV 2024 di Kalimantan Timur adalah yang paling berkesan. Membimbing taruna dari tujuh institusi kedinasan berbeda dalam pengabdian masyarakat di Kabupaten Paser mengajarkan bahwa kepemimpinan lintas budaya membutuhkan empati dan fleksibilitas. Dari situ saya memahami: keunggulan teknis perlu dilengkapi karakter baik dan jiwa kepemimpinan untuk menjadi SDM yang utuh.'},
+  {id:'q24',cat:'org',q:'Bagaimana Anda mengelola perbedaan pendapat dalam tim?',
+   a:'Perbedaan pendapat adalah sumber inovasi, bukan ancaman. Ketika mengolah data evaluasi TTIS 2025 bersama tim, kami menghadapi perbedaan metodologi analisis yang signifikan. Saya memilih pendekatan musyawarah berbasis data—menunjukkan alasan analitik di balik setiap pilihan, bukan memaksakan pendapat. Hasilnya laporan yang lebih kaya perspektif dan menjadi rujukan rekomendasi kebijakan nasional.'},
+  {id:'q25',cat:'org',q:'Apa kontribusi sosial yang telah Anda lakukan?',
+   a:'Di luar tugas formal BSSN, saya aktif berbagi pengetahuan melalui bimbingan teknis kepada aparat pemda dengan akses pelatihan terbatas. Terlibat dalam Latsitardanus sebagai pembina pengabdian masyarakat di Kalimantan Timur. Ke depan, saya akan menginisiasi webinar nasional untuk 552 pemerintah daerah agar penguatan kapasitas siber tidak hanya terpusat di kota-kota besar.'},
+  {id:'q26',cat:'wawasan',q:'Apa itu LPDP dan apa tujuannya?',
+   a:'LPDP adalah Lembaga Pengelola Dana Pendidikan—di bawah Kementerian Keuangan RI. Tujuannya: mempersiapkan pemimpin dan profesional masa depan Indonesia melalui pembiayaan pendidikan berkualitas, mendorong riset strategis yang implementatif, dan menjamin keberlangsungan dana pendidikan untuk generasi mendatang. Bagi saya, LPDP bukan sekadar beasiswa—melainkan amanah negara yang harus dikembalikan dalam bentuk pengabdian nyata dan berdampak.'},
+  {id:'q27',cat:'wawasan',q:'Apa isu krusial Indonesia yang menurut Anda perlu segera diselesaikan?',
+   a:'Kesenjangan keamanan siber di sektor pemerintahan adalah isu krusial yang sering luput dari perhatian publik. Dengan 5,4 miliar trafik anomali siber pada 2025 dan 79% indikasi kebocoran data menyasar administrasi pemerintah, ini bukan sekadar masalah teknis—ini ancaman terhadap kepercayaan publik pada negara. Transformasi digital melalui SPBE dan Asta Cita harus diimbangi penguatan infrastruktur keamanan yang proporsional, terutama di pemerintah daerah.'},
+  {id:'q28',cat:'wawasan',q:'Apa pandangan Anda tentang Indonesia Emas 2045?',
+   a:'Indonesia Emas 2045 hanya bisa terwujud jika fondasi digitalnya aman. Ketahanan siber pemerintah adalah prasyarat—bukan aksesori—dari transformasi digital menuju 2045. Saya ingin berkontribusi memastikan bahwa ketika Indonesia mencapai tonggak itu, infrastruktur digital pemerintahnya dijaga oleh sistem cerdas dan adaptif, bukan oleh "penjaga tunggal" yang rentan. Riset dan pengabdian saya adalah kontribusi konkret untuk mimpi besar itu.'},
+  {id:'q29',cat:'wawasan',q:'Bagaimana pandangan Anda tentang perkembangan AI dan dampaknya bagi Indonesia?',
+   a:'AI membuka paradigma baru dalam keamanan siber: dari sistem reaktif berbasis aturan statis menuju sistem prediktif yang belajar dari pola ancaman secara real-time. Bagi Indonesia dengan keterbatasan SDM siber di banyak daerah, otomatisasi berbasis AI bukan kemewahan—melainkan solusi pragmatis yang memungkinkan perlindungan tetap berjalan efektif meski sumber daya terbatas. Inilah inti dari tesis yang akan saya kerjakan.'},
+  {id:'q30',cat:'wawasan',q:'Apa perbedaan conference, workshop, symposium, dan proceeding?',
+   a:'Conference: pertemuan formal peneliti yang mempresentasikan hasil riset dalam skala besar. Workshop: sesi interaktif intensif untuk mempraktikkan topik tertentu dalam kelompok kecil. Symposium: diskusi akademik mendalam terfokus pada satu topik. Proceeding: kumpulan makalah akademik yang dipublikasikan dalam konteks konferensi. Penelitian saya tentang ECC untuk keamanan IoT diterbitkan dalam prosiding IEEE di COSITE Universitas Syiah Kuala.'},
+  {id:'q31',cat:'wawasan',q:'Siapa pejabat yang relevan dengan bidang keamanan siber saat ini?',
+   a:'Bidang saya berkaitan dengan Kepala BSSN sebagai pemimpin kebijakan keamanan siber nasional, Menteri Komunikasi dan Digital yang mengawasi transformasi digital SPBE, serta Menteri PAN-RB terkait reformasi birokrasi digital. Kebijakan UU PDP dan RUU KKS juga sangat relevan dengan tugas sehari-hari saya di BSSN. Sebagai ASN, saya mengikuti perkembangan kebijakan ini secara aktif karena langsung berdampak pada arah kerja dan penugasan.'},
+  {id:'q32',cat:'wawasan',q:'Apa makna Pancasila dan UUD 1945 dalam konteks pekerjaan Anda?',
+   a:'Sila ke-5 Keadilan Sosial bagi Seluruh Rakyat Indonesia sangat relevan. Kesenjangan kapasitas siber antara pemda maju dan tertinggal adalah bentuk ketidakadilan digital yang nyata. UUD 1945 Pasal 31 menjamin hak warga atas pendidikan—dalam era digital, akses pada layanan publik yang aman adalah perpanjangan dari hak itu. Pekerjaan saya di BSSN adalah upaya konkret mewujudkan keadilan digital tersebut melalui penguatan TTIS di seluruh Indonesia.'},
+];
+
+var qData = [];
+function loadQData() {
+  try {
+    var s = localStorage.getItem(QKEY);
+    if (s) { qData = JSON.parse(s); return; }
+  } catch(e) {}
+  qData = JSON.parse(JSON.stringify(defaultQ));
+}
+function saveQData() {
+  try { localStorage.setItem(QKEY, JSON.stringify(qData)); } catch(e) {}
+}
+function getQ(id) { return qData.find(function(q) { return q.id === id; }); }
+
+var activeFilter = 'semua';
+var searchTerm = '';
+
+function filterQ(cat, btn) {
+  activeFilter = cat;
+  document.querySelectorAll('.q-filter-btn').forEach(function(b) { b.classList.remove('active'); });
+  btn.classList.add('active');
+  renderQList();
+}
+function searchQ(val) { searchTerm = val.toLowerCase(); renderQList(); }
+
+function catLabel(c) {
+  return { utama:'Utama', studi:'Studi', pribadi:'Pribadi', org:'Organisasi', wawasan:'Wawasan' }[c] || c;
+}
+function catCls(c) {
+  return { utama:'q-cat-utama', studi:'q-cat-studi', pribadi:'q-cat-pribadi', org:'q-cat-org', wawasan:'q-cat-wawasan' }[c] || '';
+}
+
+function esc(s) {
+  return String(s)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;').replace(/\n/g,'<br>');
+}
+function escAttr(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/\n/g,' ');
+}
+
+function renderQList() {
+  var list = document.getElementById('q-list');
+  if (!list) return;
+  var num = 0;
+  var filtered = qData.filter(function(q) {
+    return (activeFilter === 'semua' || q.cat === activeFilter) &&
+           (!searchTerm || q.q.toLowerCase().includes(searchTerm) || q.a.toLowerCase().includes(searchTerm));
+  });
+  if (filtered.length === 0) {
+    list.innerHTML = '<div style="text-align:center;padding:2rem;color:var(--text-muted);font-size:0.875rem;">Tidak ada pertanyaan yang cocok.</div>';
+    return;
+  }
+  list.innerHTML = filtered.map(function(q) {
+    num++;
+    return '<div class="q-card" data-id="' + q.id + '">'
+      + '<div class="q-header" onclick="toggleQBody(\'' + q.id + '\')">'
+        + '<div class="q-num">' + num + '</div>'
+        + '<div style="flex:1">'
+          + '<span class="q-category-badge ' + catCls(q.cat) + '">' + catLabel(q.cat) + '</span>'
+          + '<div class="q-text" id="qtext-' + q.id + '">' + esc(q.q) + '</div>'
+          + '<input class="q-question-edit" id="qedit-' + q.id + '" value="' + escAttr(q.q) + '">'
+        + '</div>'
+        + '<div class="q-toggle" id="qtog-' + q.id + '">\u25be</div>'
+      + '</div>'
+      + '<div class="q-body" id="qbody-' + q.id + '">'
+        + '<div class="q-answer-area">'
+          + '<div class="q-answer-label"><span>Jawaban (berdasarkan essay)</span>'
+            + '<div class="q-saved-msg" id="qsaved-' + q.id + '">\u2713 Tersimpan</div>'
+          + '</div>'
+          + '<div class="q-answer-text" id="qatext-' + q.id + '">' + esc(q.a) + '</div>'
+          + '<textarea class="q-answer-edit" id="qaedit-' + q.id + '">' + esc(q.a) + '</textarea>'
+          + '<div class="q-btn-row">'
+            + '<button class="q-btn q-btn-edit" id="qbtn-edit-' + q.id + '" onclick="startEdit(\'' + q.id + '\')">\u270f Edit</button>'
+            + '<button class="q-btn q-btn-save" id="qbtn-save-' + q.id + '" onclick="saveEdit(\'' + q.id + '\')">\u2713 Simpan</button>'
+            + '<button class="q-btn q-btn-cancel" id="qbtn-cancel-' + q.id + '" onclick="cancelEdit(\'' + q.id + '\')">\u2715 Batal</button>'
+          + '</div>'
+        + '</div>'
+      + '</div>'
+    + '</div>';
+  }).join('');
+}
+
+function toggleQBody(id) {
+  var b = document.getElementById('qbody-' + id);
+  var t = document.getElementById('qtog-' + id);
+  if (!b) return;
+  var open = b.classList.toggle('open');
+  if (t) t.classList.toggle('open', open);
+}
+
+function startEdit(id) {
+  var q = getQ(id); if (!q) return;
+  var t  = document.getElementById('qatext-' + id);
+  var te = document.getElementById('qaedit-' + id);
+  var qt = document.getElementById('qtext-' + id);
+  var qe = document.getElementById('qedit-' + id);
+  if (t)  t.style.display  = 'none';
+  if (te) { te.style.display = 'block'; te.value = q.a; te.focus(); }
+  if (qt) qt.style.display = 'none';
+  if (qe) { qe.style.display = 'block'; qe.value = q.q; }
+  showEl('qbtn-edit-' + id, false);
+  showEl('qbtn-save-' + id, true);
+  showEl('qbtn-cancel-' + id, true);
+}
+
+function saveEdit(id) {
+  var q  = getQ(id); if (!q) return;
+  var te = document.getElementById('qaedit-' + id);
+  var qe = document.getElementById('qedit-' + id);
+  if (te) q.a = te.value;
+  if (qe) q.q = qe.value;
+  saveQData();
+  var t  = document.getElementById('qatext-' + id);
+  var qt = document.getElementById('qtext-' + id);
+  if (t)  { t.innerHTML  = esc(q.a); t.style.display  = 'block'; }
+  if (te) te.style.display = 'none';
+  if (qt) { qt.innerHTML = esc(q.q); qt.style.display = 'block'; }
+  if (qe) qe.style.display = 'none';
+  showEl('qbtn-edit-' + id, true);
+  showEl('qbtn-save-' + id, false);
+  showEl('qbtn-cancel-' + id, false);
+  var sm = document.getElementById('qsaved-' + id);
+  if (sm) { sm.style.display = 'inline'; setTimeout(function() { sm.style.display = 'none'; }, 2000); }
+}
+
+function cancelEdit(id) {
+  var t  = document.getElementById('qatext-' + id);
+  var te = document.getElementById('qaedit-' + id);
+  var qt = document.getElementById('qtext-' + id);
+  var qe = document.getElementById('qedit-' + id);
+  if (t)  t.style.display  = 'block';
+  if (te) te.style.display = 'none';
+  if (qt) qt.style.display = 'block';
+  if (qe) qe.style.display = 'none';
+  showEl('qbtn-edit-' + id, true);
+  showEl('qbtn-save-' + id, false);
+  showEl('qbtn-cancel-' + id, false);
+}
+
+function showEl(id, visible) {
+  var el = document.getElementById(id);
+  if (el) el.style.display = visible ? 'inline-block' : 'none';
+}
+
+// ── ADD QUESTION MODAL ──
+var selectedCat = 'utama';
+
+function openAddModal() {
+  // reset form
+  selectedCat = 'utama';
+  var qInput = document.getElementById('add-q-input');
+  var aInput = document.getElementById('add-a-input');
+  var errMsg = document.getElementById('add-error-msg');
+  if (qInput) qInput.value = '';
+  if (aInput) aInput.value = '';
+  if (errMsg) errMsg.style.display = 'none';
+  // reset category buttons
+  document.querySelectorAll('.add-cat-btn').forEach(function(b) {
+    b.classList.toggle('active', b.getAttribute('data-cat') === 'utama');
+  });
+  var overlay = document.getElementById('add-modal-overlay');
+  if (overlay) overlay.classList.add('open');
+  setTimeout(function() { if (qInput) qInput.focus(); }, 100);
+}
+
+function closeAddModal() {
+  var overlay = document.getElementById('add-modal-overlay');
+  if (overlay) overlay.classList.remove('open');
+}
+
+function selectCat(btn) {
+  selectedCat = btn.getAttribute('data-cat');
+  document.querySelectorAll('.add-cat-btn').forEach(function(b) {
+    b.classList.toggle('active', b === btn);
+  });
+}
+
+function submitNewQ() {
+  var qInput = document.getElementById('add-q-input');
+  var aInput = document.getElementById('add-a-input');
+  var errMsg = document.getElementById('add-error-msg');
+  var qText  = qInput ? qInput.value.trim() : '';
+  var aText  = aInput ? aInput.value.trim() : '';
+
+  if (!qText) {
+    if (errMsg) errMsg.style.display = 'block';
+    if (qInput) qInput.focus();
+    return;
+  }
+  if (errMsg) errMsg.style.display = 'none';
+
+  // Generate unique id
+  var newId = 'q-custom-' + Date.now();
+  var newQ  = { id: newId, cat: selectedCat, q: qText, a: aText };
+  qData.push(newQ);
+  saveQData();
+
+  // If current filter matches, re-render; else switch to 'semua'
+  if (activeFilter !== 'semua' && activeFilter !== selectedCat) {
+    activeFilter = 'semua';
+    document.querySelectorAll('.q-filter-btn').forEach(function(b) {
+      b.classList.remove('active');
+    });
+    var allBtn = document.querySelector('.q-filter-btn');
+    if (allBtn) allBtn.classList.add('active');
+  }
+
+  renderQList();
+  closeAddModal();
+
+  // Scroll to bottom of list and open the new card
+  setTimeout(function() {
+    var newCard = document.querySelector('[data-id="' + newId + '"]');
+    if (newCard) {
+      newCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      // highlight briefly
+      newCard.style.outline = '2px solid #7C3AED';
+      newCard.style.outlineOffset = '2px';
+      setTimeout(function() {
+        newCard.style.outline = '';
+        newCard.style.outlineOffset = '';
+        toggleQBody(newId);
+      }, 800);
+    }
+  }, 150);
+}
+
+// close modal on Escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeAddModal();
+});
+
+// ── INIT ──
+document.addEventListener('DOMContentLoaded', function() {
+  ['ps', 'komitmen'].forEach(function(key) {
+    var chev = document.getElementById('chev-' + key);
+    if (chev) {
+      chev.style.cursor = 'pointer';
+      chev.addEventListener('click', function(e) {
+        e.stopPropagation();
+        toggleSubMenu(key);
+      });
+    }
+  });
+
+  document.addEventListener('click', function(e) {
+    ['ps', 'komitmen'].forEach(function(key) {
+      var g = document.getElementById('navgroup-' + key);
+      if (g && !g.contains(e.target)) {
+        var sub = document.getElementById('sub-' + key);
+        if (sub) { sub.classList.remove('open'); subOpen[key] = false; }
+      }
+    });
+  });
+
+  loadAllNotes();
+  loadQData();
+  renderQList();
+  applyState();
+});
+</script>
+
+</body>
+</html>
